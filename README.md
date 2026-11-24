@@ -104,3 +104,7 @@ Some easy first tweaks:
 ## License
 
 [MIT](LICENSE): free to use, change and share, including in your own projects.
+
+## NAVI Engineering Universe
+
+[Public ecosystem integration](integration/README.md) — immersive presentation layer for the Neguchads engineering portfolio. The original experience remains intact.

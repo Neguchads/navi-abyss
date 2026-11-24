@@ -1,0 +1,3 @@
+# NAVYV Abyss / NAVI Universe bridge
+
+The original WebGPU underwater world remains available unchanged. The lightweight theme in `integration/universe.css` reuses its depth, light and atmospheric principles in the Neguchads brand palette. It is consumed at build time by [GitHub Homepage](https://github.com/Neguchads/github-homepage), with public data from [NAVI Graphify](https://github.com/Neguchads/navi-graphify) and published by [Neguchads](https://github.com/Neguchads/Neguchads). The dashboard needs no WebGPU or external CDN; the optional original Abyss scene still requires WebGPU. No credentials or analytics collection in the browser.
