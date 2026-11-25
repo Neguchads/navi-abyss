@@ -1,9 +1,19 @@
-# Abyssal Garden
+<p align="center"><img src=".github/assets/navyv-abyss.svg" alt="NAVYV Abyss — NAVI Engineering Universe" width="100%"></p>
 
-**A dreamy underwater world you can swim through, right in your browser.**
+<p align="center"><strong>Immersive engineering laboratory · WebGPU · Local-first</strong></p>
+<p align="center"><a href="#try-it">Explore</a> · <a href="docs/ENGINEERING.md">Architecture / Roadmap / Handoff</a> · <a href="https://github.com/Neguchads/navi-core">NAVI Core</a> · <a href="https://github.com/Neguchads/navi-core/blob/main/docs/NEF.md">NEF</a> · <a href="https://github.com/Neguchads/navi-graphify">Graphify</a></p>
 
-Towering kelp forests, sunbeams pouring through a rippling surface, a sunken ship, manta rays gliding overhead.
-And all of it is made by code: no images, no 3D models, no sound files. The whole world fits in **one 96 KB HTML file**.
+NAVYV Abyss is the immersive presentation laboratory of the [NAVI Engineering Universe](https://github.com/Neguchads/Neguchads). It adapts the MIT-licensed [Abyssal Garden](https://github.com/Noniv/abyssal-garden) by Maksymilian Dendura, preserving its procedural underwater engine while adding a NAVI-branded reference shell, documented engineering boundaries and deterministic build integration.
+
+| Layer | Responsibility | Evidence |
+|---|---|---|
+| Abyss | Procedural world, WebGPU renderer and synthesized audio | [Source](source/src) |
+| NAVYV | Reference interface, offline delivery and visual identity | [Composition module](source/reference.mjs) |
+| NAVI Core | Pinned static-website pilot gate | [Workflow](.github/workflows/navi-pilot.yml) |
+| NEF | Adaptable engineering references, roadmap and handoff | [Engineering record](docs/ENGINEERING.md) |
+| Universe / Graphify | Public ecosystem discovery, no live data ingestion in this scene | [Integration](integration/README.md) |
+
+**Experimental.** The pilot is not WebGPU runtime certification. No AI provider, credentials, analytics or remote asset dependencies are required to explore the scene.
 
 ![Kelp forest with a stone whale tail and a manta ray](.github/screenshots/whale-fluke.jpg)
 
@@ -75,11 +85,12 @@ The readable source code is in the [`source`](source) folder. To change somethin
 
 ```bash
 cd source
-npm install
+npm ci
+npm run verify
 npm run build
 ```
 
-This writes a new `index.html` next to this README. `npm run build:readable` writes an unminified version instead, which is easier to debug in the browser's developer tools.
+The verification command checks the reference shell contract. The build applies the NAVYV shell after bundling; the original source template remains the upstream baseline. This writes a new `index.html` next to this README. `npm run build:readable` writes an unminified version instead, which is easier to debug in the browser's developer tools.
 
 `npm run build:dev` writes a separate `dev.html` with two extra tools that are not part of `index.html`: `F` flies the camera along a one-minute path through the whole world, and `B` runs that flight as a benchmark and reports frame and GPU times.
 
@@ -101,9 +112,9 @@ Some easy first tweaks:
 - **Brightness and light rays:** `EXPO` and `RAYS` in `main.js`
 - **Swimming speed:** search for `26 : 7` in `main.js` (fast speed : normal speed)
 
-## License
+## License and attribution
 
-[MIT](LICENSE): free to use, change and share, including in your own projects.
+[MIT](LICENSE). Original Abyssal Garden by Maksymilian Dendura ([Noniv](https://github.com/Noniv)); NAVYV interface and engineering integration by Neguchads. Original attribution and support are retained.
 
 ## NAVI Engineering Universe
 

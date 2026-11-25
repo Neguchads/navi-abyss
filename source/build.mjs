@@ -7,6 +7,7 @@ import { gzipSync } from 'node:zlib';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { transformSync } from 'esbuild';
+import { applyReference } from './reference.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const FILES = ['quality.js', 'math.js', 'shaders.js', 'world.js', 'main.js', 'audio.js']; // concatenation order matters
@@ -30,6 +31,7 @@ if (readable) {
   const css = (_, s) => '<style>' + transformSync(s, { loader: 'css', minify: true }).code.trim();
   html = tpl.replace(/<style>([^]*?)(?=<\/style>)/, css).replace(/>\s+</g, '><').replace('/*SCRIPT*/', () => code).replace(/<script>\s+/, '<script>').replace(/\s+<\/script>/, '</script>');
 }
+html = applyReference(html);
 writeFileSync(path.join(here, '..', out), html);
 const gz = gzipSync(Buffer.from(html), { level: 9 }).length;
 console.log(`${out}: ${(html.length / 1024).toFixed(1)} kB${readable ? ' (readable)' : ''}, ${(gz / 1024).toFixed(1)} kB gzipped`);
