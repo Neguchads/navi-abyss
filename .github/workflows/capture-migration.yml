@@ -1,13 +1,13 @@
 name: Capture NAVYV reference (migration)
 on:
-  push:
-    branches: [navi/own-visuals-02]
-    paths: [reference.html, scripts/capture-reference.sh, .github/workflows/capture-migration.yml]
+  pull_request:
+    branches: [main]
+    types: [opened, synchronize, reopened]
 permissions:
   contents: read
 jobs:
   capture:
-    if: github.repository == 'Neguchads/navyv-abyss' && github.ref == 'refs/heads/navi/own-visuals-02'
+    if: github.repository == 'Neguchads/navyv-abyss' && github.event.pull_request.head.repo.full_name == github.repository && github.head_ref == 'navi/own-visuals-02'
     runs-on: ubuntu-24.04
     timeout-minutes: 8
     permissions:
@@ -15,6 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
         with:
+          ref: ${{ github.event.pull_request.head.sha }}
           persist-credentials: false
       - run: bash scripts/capture-reference.sh
       - name: Commit only generated captures to migration branch
