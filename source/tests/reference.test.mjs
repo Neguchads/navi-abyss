@@ -2,6 +2,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
 import { applyReference } from '../reference.mjs';
+import { validateCatalog } from '../../cosmic/validate.mjs';
 const read = (name) => readFileSync(new URL(name, import.meta.url), 'utf8');
 const template = read('../template.html');
 const output = read('../../index.html');
@@ -50,4 +51,25 @@ test('committed cosmic captures have PNG signature, dimensions and distinct byte
  const buffers=['overview','architecture','engineering'].map(view=>readFileSync(new URL('../../.github/screenshots/navi-'+view+'.png',import.meta.url)));
  for(const png of buffers){assert.equal(png.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(png.readUInt32BE(16),1440);assert.equal(png.readUInt32BE(20),1060);assert.ok(png.length>10000)}
  for(let i=0;i<buffers.length;i++)for(let j=i+1;j<buffers.length;j++)assert.ok(!buffers[i].equals(buffers[j]));
+});
+
+test('cosmic build rejects malformed public catalog before output', () => {
+ const catalog=JSON.parse(read('../../cosmic/catalog.json'));
+ assert.equal(validateCatalog(catalog),catalog);
+ const mutations=[
+  c=>c.owner='other',
+  c=>c.sectors[0].repos[0][0]='../private',
+  c=>c.sectors[0].repos[0][0]=1,
+  c=>c.sectors[1].repos.push(c.sectors[0].repos[0]),
+  c=>c.sectors[1].id=c.sectors[0].id,
+  c=>c.sectors[0].color='url(https://example.invalid)',
+  c=>c.sectors[0].pos=[0,1],
+  c=>c.integrations[0].target='unknown',
+  c=>c.integrations.push(c.integrations[0]),
+  c=>c.source.commit='main',
+ ];
+ for (const mutate of mutations) {
+  const copy=structuredClone(catalog);mutate(copy);
+  assert.throws(()=>validateCatalog(copy),/Invalid cosmic|Duplicate cosmic/);
+ }
 });
