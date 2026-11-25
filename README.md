@@ -1,57 +1,44 @@
-<p align="center"><img src=".github/assets/navyv-abyss.svg" alt="NAVYV Abyss — NAVI Engineering Universe" width="100%"></p>
-<p align="center"><strong>Immersive engineering laboratory · NAVI-OS reference 01</strong></p>
-<p align="center"><a href="reference.html">NAVI reference interface</a> · <a href="index.html">WebGPU experience</a> · <a href="docs/ENGINEERING.md">Engineering</a> · <a href="https://github.com/Neguchads/navi-core">Core / NEF</a> · <a href="https://github.com/Neguchads/navi-graphify">Graphify</a></p>
+<p align="center"><img src=".github/assets/navi-abyss.svg" alt="NAVI Abyss — Cosmic Engineering Universe" width="100%"></p>
 
-NAVYV Abyss is a local-first presentation laboratory for the [NAVI Engineering Universe](https://github.com/Neguchads/Neguchads). The dedicated reference dashboard exposes project architecture and verification boundaries; the separate WebGPU experience explores a procedural underwater world. No account, AI provider, telemetry or external asset dependency is needed.
+<p align="center"><strong>A cosmic ocean where repositories become stars and engineering becomes exploration.</strong></p>
+<p align="center"><a href="reference.html">Launch the 3D universe</a> · <a href="docs/ENGINEERING.md">Architecture / roadmap / handoff</a> · <a href="https://github.com/Neguchads/navi-graphify">Graphify</a> · <a href="https://github.com/Neguchads/navi-core">NAVI Core / NEF</a></p>
 
-## NAVI reference interface
+## Cosmic Engineering Universe
 
-![NAVYV overview — actual browser capture](.github/screenshots/navi-overview.png)
+Explore a suspended procedural ocean in deep space, flying naval vessels and constellations of actual public repositories. Every named star is a public GitHub repository; select it to inspect documented integrations and open the repository. Faint particles are cosmic dust. The graph uses the reviewed public catalog, not private graphs or invented dependencies.
 
-| Architecture | Engineering |
+![NAVI Abyss — cosmic ocean](.github/screenshots/navi-overview.png)
+
+| Stellar graph | Naval exploration |
 |---|---|
-| ![Architecture inspector](.github/screenshots/navi-architecture.png) | ![Engineering workflow](.github/screenshots/navi-engineering.png) |
+| ![Stellar graph](.github/screenshots/navi-architecture.png) | ![Flying fleet](.github/screenshots/navi-engineering.png) |
 
-These screenshots are captured from the repository's own `reference.html` using Chromium. They depict the local interface, not GPU runtime evidence or live NAVI telemetry. See [capture provenance](docs/CAPTURES.md).
+## Explore
 
-## Explore locally
+Download [reference.html](reference.html) and open locally in a modern browser. The single file embeds a public Graphify snapshot and procedural perspective 3D renderer (Canvas software projection; not WebGPU). No external assets, network calls, AI or account needed for exploration. Repository links open GitHub.
 
-- **Reference dashboard:** download [reference.html](reference.html) and open it in a browser; it works without WebGPU. Use the Overview, Architecture and Engineering tabs. Keep the repository files together for local navigation and documentation links.
-- **Immersive scene:** download [index.html](index.html), open it in Chrome or Edge with WebGPU enabled, then enter the scene. It contains its own rendering and audio code.
-
-| Controls | Input |
+| Interaction | Input |
 |---|---|
-| Swim and look | WASD and mouse |
-| Depth and speed | Q / E, Shift |
-| Viewpoints | 1–6 |
-| Menu and resume | Esc |
-| Audio and statistics | M / H |
-| Quality presets | Low / Medium / High |
+| Orbit / zoom | Drag / wheel |
+| Pan | W A S D when canvas/page has focus |
+| Inspect or travel | Click star or label; Navigate to star |
+| Discover | Search, constellation filter, Directory |
+| Ocean / Star graph / Fleet | Mode buttons |
+| Clean view | Cinematic; Esc or Exit cinematic |
 
-Touch support is experimental. The scene requires a supported WebGPU adapter; the reference dashboard does not. The project does not claim newly measured GPU performance.
+15 verified-public catalog repositories in the initial snapshot, not an exhaustive account inventory. Solid lines indicate catalog integrations; dashed lines indicate curated category membership. [Catalog provenance](cosmic/catalog.json). No live telemetry or AST dependency inference.
 
 ## Engineering
-
-| Layer | Reference |
-|---|---|
-| Local presentation | [reference.html](reference.html) |
-| Immersive runtime | [source/src](source/src) |
-| Deterministic composition | [source/reference.mjs](source/reference.mjs) |
-| NAVI Core | [.navi/project.toml](.navi/project.toml) · [pilot](.github/workflows/navi-pilot.yml) |
-| NEF | [Architecture / roadmap / handoff](docs/ENGINEERING.md) |
-| Public ecosystem | [integration](integration/README.md) |
-| Visual evidence | [capture script](scripts/capture-reference.sh) |
 
 ```sh
 cd source
 npm ci
-npm run verify
 npm run build
 npm run verify
 ```
 
-Use `npm run build:readable` for debugging or `npm run build:dev` for the development fly-through and benchmark. Static checks and browser screenshots do not certify the WebGPU runtime.
+`reference.html` is built from `cosmic/` by the same build command. The older [index.html](index.html) remains a separate WebGPU underwater experience, preserving the upstream runtime and license. [Capture script](scripts/capture-reference.sh) generates real 1440 × 1060 browser screenshots; [evidence](docs/CAPTURES.md). The current prototype uses a CPU-side perspective 3D mesh renderer; GPU shaders and free-flight controls are roadmap items.
 
 ## License & credits
 
-[MIT](LICENSE). Original procedural underwater engine: [Abyssal Garden](https://github.com/Noniv/abyssal-garden), copyright 2026 Maksymilian Dendura. NAVYV dashboard, reference shell, documentation and engineering integration: Neguchads. Original license and copyright are retained. Git history preserves upstream provenance.
+[MIT](LICENSE). Legacy underwater engine derived from [Abyssal Garden](https://github.com/Noniv/abyssal-garden), copyright 2026 Maksymilian Dendura. NAVI cosmic scene, integration and reference interface: Neguchads. Original attribution is retained.

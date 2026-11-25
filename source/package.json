@@ -1,7 +1,7 @@
 {
-  "name": "navyv-abyss",
+  "name": "navi-abyss",
   "private": true,
-  "description": "A procedural underwater world rendered with WebGPU, bundled into one HTML file",
+  "description": "Cosmic engineering universe and legacy procedural WebGPU scene",
   "type": "module",
   "scripts": {
     "build": "node build.mjs",

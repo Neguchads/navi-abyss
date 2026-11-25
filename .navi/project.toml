@@ -1,6 +1,6 @@
 schema_version = 1
 [project]
-name = "navyv-abyss"
+name = "navi-abyss"
 visibility = "public"
 maturity = "experimental"
 profile = "static-website"

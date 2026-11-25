@@ -31,22 +31,17 @@ test('shell is local-first, with explicit upstream credit and safe external navi
   assert.throws(() => applyReference(rendered), /anchor/);
 });
 
-test('own dashboard is offline and contains all reference views', () => {
-  const dashboard = read('../../reference.html');
-  assert.doesNotMatch(dashboard, /<(?:script|link|img)\b[^>]*(?:src|href)=["']?https?:/i);
-  for (const id of ['overview','architecture','engineering']) assert.match(dashboard, new RegExp('id="'+id+'" data-view'));
-  assert.match(dashboard, /Credits:/);
-  assert.doesNotMatch(read('../../README.md'), /\.github\/screenshots\/[^)]+\.jpg/);
-});
-
-test('all committed screenshot references are actual distinct PNG files of the stated size', () => {
-  const paths = ['overview','architecture','engineering'];
-  const buffers = paths.map(view => readFileSync(new URL('../../.github/screenshots/navi-'+view+'.png', import.meta.url)));
-  for (const png of buffers) {
-    assert.equal(png.subarray(0,8).toString('hex'), '89504e470d0a1a0a');
-    assert.equal(png.readUInt32BE(16), 1440);
-    assert.equal(png.readUInt32BE(20), 1060);
-    assert.ok(png.length > 10000);
-  }
-  for (let i=0;i<buffers.length;i++) for (let j=i+1;j<buffers.length;j++) assert.ok(!buffers[i].equals(buffers[j]));
+test('cosmic catalog and offline source/output contract', () => {
+ const catalog=JSON.parse(read('../../cosmic/catalog.json'));
+ const ids=catalog.sectors.flatMap(s=>s.repos.map(r=>r[0]));
+ assert.equal(catalog.owner,'Neguchads');assert.equal(ids.length,new Set(ids).size);
+ assert.ok(ids.includes('navi-abyss'));assert.ok(ids.includes('navi-core'));
+ for(const id of ids)assert.match(id,/^[A-Za-z0-9_.-]+$/);
+ for(const edge of catalog.integrations){assert.ok(ids.includes(edge.source));assert.ok(ids.includes(edge.target))}
+ const html=read('../../reference.html');
+ const serialized=read('../../cosmic/catalog.json').trim().replace(/</g,'\\u003c').replace(/>/g,'\\u003e').replace(/&/g,'\\u0026');
+ assert.equal(html,read('../../cosmic/template.html').replace('/*CATALOG*/',()=>serialized).replace('/*COSMIC*/',()=>read('../../cosmic/scene.js').trim()));
+ assert.doesNotMatch(html, /<(?:script|link|img)\b[^>]*(?:src|href)=["']?https?:/i);
+ assert.match(html,/function proj\(p\)/);assert.match(html,/function water\(time\)/);assert.match(html,/function ship\(pos,heading,size\)/);
+ assert.doesNotMatch(html,/navyv-abyss/i);
 });

@@ -1,18 +1,253 @@
 <!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#070d16"><title>NAVYV | NAVI Engineering Universe</title>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#030814"><title>NAVI Abyss — Cosmic Engineering Universe</title>
 <style>
-:root{color-scheme:dark;--ink:#070d16;--panel:#0c1724;--line:#233c50;--cyan:#63daff;--text:#ecf5ff;--muted:#a9bfd2;font:15px/1.5 system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;color:var(--text);background:radial-gradient(ellipse at 75% 0,#12364b 0,transparent 52%),var(--ink);min-height:100vh}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}button,a{outline-offset:5px}button:focus-visible,a:focus-visible{outline:2px solid var(--cyan)}.frame{max-width:1440px;margin:auto;padding:24px 40px}.top{display:flex;align-items:center;justify-content:space-between;gap:18px;border-bottom:1px solid var(--line);padding-bottom:22px}.brand{display:flex;align-items:center;gap:13px}.brand svg{width:48px;height:48px}.brand strong{font-size:22px;letter-spacing:.04em}.brand small,.mono{font:12px/1.5 ui-monospace,monospace;letter-spacing:.13em;text-transform:uppercase;color:var(--muted)}.brand small{display:block}.status{color:var(--cyan);font:12px ui-monospace,monospace;border:1px solid var(--line);padding:9px 13px;border-radius:5px}.layout{display:grid;grid-template-columns:210px minmax(0,1fr);gap:32px;margin-top:28px}.side{border-right:1px solid var(--line);padding-right:22px}.side p{margin:10px 0 15px}.tabs{display:grid;gap:7px}.tabs a{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 14px;border:1px solid transparent;border-radius:7px;color:var(--muted);font-weight:600}.tabs a[aria-current=page]{background:#102a3a;border-color:#3a778e;color:var(--cyan)}.side .note{margin-top:30px;padding:15px 12px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}h1,h2,h3,p{margin:0}h1{font-size:clamp(34px,4.4vw,67px);line-height:1.04;letter-spacing:-.045em}h2{font-size:26px;letter-spacing:-.02em}h3{font-size:18px}p{color:var(--muted)}.accent{color:var(--cyan)}.hero{position:relative;isolation:isolate;overflow:hidden;min-height:300px;display:flex;align-items:center;border:1px solid #34566c;border-radius:14px;padding:34px;background:linear-gradient(105deg,#0c1825 15%,#102a3a 70%,#0a1622)}.hero-copy{max-width:520px;z-index:1}.hero p{font-size:16px;margin:16px 0 22px;max-width:42ch}.hero .mono{color:var(--cyan);display:block;margin-bottom:15px}.hero-art{position:absolute;width:52%;right:0;top:0;height:100%;opacity:.82;z-index:-1}.actions{display:flex;gap:10px;flex-wrap:wrap}.action{display:inline-block;padding:10px 16px;border:1px solid #35566d;border-radius:6px;font-weight:700;color:var(--text)}.action.primary{background:var(--cyan);color:#081520;border-color:var(--cyan)}.metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:16px 0}.metric,.panel{background:#0b1623d9;border:1px solid var(--line);border-radius:10px;padding:19px}.metric strong{display:block;margin:6px 0;font-size:21px;color:var(--text)}.metric p{font-size:13px}.heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:24px 0 13px}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.panel p{font-size:14px;margin-top:8px}.panel .mono{color:var(--cyan);font-size:11px;margin-bottom:8px;display:block}.panel a{display:inline-block;margin-top:11px;font-size:13px}.graph{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(220px,1fr);gap:16px;margin-top:22px}.graph svg{width:100%;height:auto}.graph .panel{min-height:320px}.graph button{width:100%;text-align:left;background:#102334;color:var(--text);padding:12px;border:1px solid var(--line);border-radius:6px;margin-top:8px;font:inherit;cursor:pointer}.graph button[aria-pressed=true]{border-color:var(--cyan);color:var(--cyan)}.detail{margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}.workflow{display:grid;gap:12px;margin-top:22px}.step{display:grid;grid-template-columns:54px 1fr auto;align-items:center;gap:14px}.step .num{font:25px ui-monospace,monospace;color:var(--cyan)}.tag{font:11px ui-monospace,monospace;color:var(--muted);text-transform:uppercase;border:1px solid var(--line);padding:6px 8px;border-radius:4px}.footer{border-top:1px solid var(--line);margin-top:25px;padding-top:16px;display:flex;justify-content:space-between;gap:16px;font-size:12px;color:var(--muted)}[hidden]{display:none!important}@media(max-width:850px){.frame{padding:18px}.layout{grid-template-columns:1fr;gap:15px}.side{border:0;padding:0}.tabs{grid-template-columns:repeat(3,minmax(0,1fr))}.tabs a{padding:9px}.side .note,.side>p{display:none}.hero{padding:24px}.hero-art{opacity:.25}.graph{grid-template-columns:1fr}.metrics{grid-template-columns:1fr}.cards{grid-template-columns:1fr}.step{grid-template-columns:35px 1fr}.step .tag{grid-column:2;justify-self:start}.footer{flex-direction:column}.status{display:none}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
-</style></head><body><div class="frame">
-<header class="top"><div class="brand"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#b4c8d8" d="M4 40 15 7h7l13 18 9-18-10 33h-6L15 22 9 40Z"/><path fill="#63daff" d="m16 45 12-15 6 9Z"/></svg><div><strong>NAVYV <span class="accent">ABYSS</span></strong><small>NAVI ENGINEERING UNIVERSE / 01</small></div></div><span class="status">● LOCAL-FIRST / REFERENCE</span></header>
-<div class="layout"><aside class="side"><p class="mono">Navigation</p><nav class="tabs" aria-label="Reference views"><a href="#overview" data-tab="overview">Overview <span>01</span></a><a href="#architecture" data-tab="architecture">Architecture <span>02</span></a><a href="#engineering" data-tab="engineering">Engineering <span>03</span></a></nav><div class="note"><span class="mono">Reference scope</span><p>Public project relationships. No telemetry, account data or remote AI services.</p></div><div class="note"><a href="index.html">Launch WebGPU scene ↗</a><p>Separate immersive runtime.</p></div></aside>
-<main>
-<section id="overview" data-view><div class="hero"><svg class="hero-art" viewBox="0 0 540 340" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><radialGradient id="glow"><stop stop-color="#63daff" stop-opacity=".35"/><stop offset="1" stop-color="#63daff" stop-opacity="0"/></radialGradient><pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse"><path d="M36 0H0V36" fill="none" stroke="#63daff" stroke-opacity=".12"/></pattern></defs><rect width="540" height="340" fill="url(#grid)"/><circle cx="310" cy="170" r="165" fill="url(#glow)"/><g fill="none" stroke="#63daff" stroke-opacity=".58"><ellipse cx="310" cy="170" rx="175" ry="112" transform="rotate(-24 310 170)"/><ellipse cx="310" cy="170" rx="175" ry="112" transform="rotate(24 310 170)"/><circle cx="310" cy="170" r="114"/><circle cx="310" cy="170" r="82" stroke-dasharray="4 8"/><path d="M145 170h330M310 5v330M187 70l246 200M187 270L433 70"/></g><g fill="#63daff"><circle cx="145" cy="170" r="5"/><circle cx="475" cy="170" r="5"/><circle cx="310" cy="56" r="5"/><circle cx="310" cy="284" r="5"/></g><g transform="translate(263 119) scale(2)"><path fill="#dce9f4" d="M4 40 15 7h7l13 18 9-18-10 33h-6L15 22 9 40Z"/><path fill="#63daff" d="m16 45 12-15 6 9Z"/></g></svg><div class="hero-copy"><span class="mono">01 / Immersive engineering laboratory</span><h1>Explore.<br><span class="accent">Build. Verify.</span></h1><p>A local-first reference interface connecting the NAVI engineering ecosystem to an immersive procedural world.</p><div class="actions"><a class="action primary" href="index.html">Enter Abyss</a><a class="action" href="#architecture">Inspect architecture</a></div></div></div>
-<div class="metrics"><div class="metric"><span class="mono">01 / Runtime</span><strong>WebGPU + HTML</strong><p>Separate scene and reference interface</p></div><div class="metric"><span class="mono">02 / Governance</span><strong>NAVI Core + NEF</strong><p>Manifest, guidance and verification</p></div><div class="metric"><span class="mono">03 / Delivery</span><strong>Offline-first</strong><p>No account or external asset required</p></div></div>
-<div class="heading"><h2>Engineering layers</h2><span class="mono">Public references</span></div><div class="cards"><article class="panel"><span class="mono">Core / 01</span><h3>NAVI Core</h3><p>Provider-independent contracts and deterministic verification.</p><a href="https://github.com/Neguchads/navi-core">Open repository ↗</a></article><article class="panel"><span class="mono">Framework / 02</span><h3>NEF</h3><p>Adaptable engineering profiles, documentation and handoff.</p><a href="https://github.com/Neguchads/navi-core/blob/main/docs/NEF.md">Open framework ↗</a></article><article class="panel"><span class="mono">Knowledge / 03</span><h3>NAVI Graphify</h3><p>Public catalog; this reference map is curated locally.</p><a href="https://github.com/Neguchads/navi-graphify">Open repository ↗</a></article><article class="panel"><span class="mono">Presentation / 04</span><h3>GitHub Homepage</h3><p>Public portfolio and reusable presentation layer.</p><a href="https://github.com/Neguchads/github-homepage">Open repository ↗</a></article></div></section>
-<section id="architecture" data-view hidden><span class="mono accent">02 / Architecture</span><h1 style="margin:12px 0">Connected by <span class="accent">design.</span></h1><p>Curated relationships, not a live dependency graph. Select an engineering layer to inspect its role.</p><div class="graph"><div class="panel"><span class="mono">System map / reference topology</span><svg viewBox="0 0 580 440" role="img" aria-label="NAVI Core and NEF connect to NAVYV; Graphify and Homepage are public references"><defs><pattern id="mapgrid" width="25" height="25" patternUnits="userSpaceOnUse"><path d="M25 0H0V25" fill="none" stroke="#29485d" stroke-opacity=".35"/></pattern></defs><rect width="580" height="440" fill="url(#mapgrid)"/><g fill="none" stroke="#63daff" stroke-width="2" opacity=".72"><path d="M290 70v37H125v45M290 107h165v45M125 216v37h165v35M455 216v37H290"/><path d="M290 352v25H125v24M290 377h165v24" stroke-dasharray="6 6"/></g><g fill="#102638" stroke="#416e84" stroke-width="1.5"><rect x="205" y="17" width="170" height="54" rx="8"/><rect x="36" y="152" width="178" height="64" rx="8"/><rect x="366" y="152" width="178" height="64" rx="8"/><rect x="175" y="288" width="230" height="64" rx="8" stroke="#63daff" stroke-width="2"/><rect x="45" y="400" width="160" height="38" rx="6"/><rect x="375" y="400" width="160" height="38" rx="6"/></g><g fill="#eaf4ff" font-family="system-ui" font-size="17" text-anchor="middle"><text x="290" y="49">NAVI-OS</text><text x="125" y="181">NAVI Core</text><text x="455" y="181">NEF</text><text x="290" y="325" fill="#63daff" font-weight="700">NAVYV ABYSS</text><text x="125" y="424" font-size="13">Graphify</text><text x="455" y="424" font-size="13">Homepage</text></g><g fill="#a9bfd2" font-family="system-ui" font-size="11" text-anchor="middle"><text x="125" y="200">Verification</text><text x="455" y="200">Reference policies</text><text x="290" y="341">Reference 01</text></g></svg><p>Solid: engineering references. Dashed: public navigation.</p></div><div class="panel"><span class="mono">Layer inspector</span><div id="layer-buttons"><button data-layer="core" aria-pressed="true">01 / NAVI Core</button><button data-layer="nef" aria-pressed="false">02 / NEF</button><button data-layer="graph" aria-pressed="false">03 / Graphify</button><button data-layer="home" aria-pressed="false">04 / Homepage</button></div><div class="detail"><h3 id="layer-title">NAVI Core</h3><p id="layer-desc">Pinned project verification and manifest contracts. The static-website pilot is not a GPU runtime test.</p><a id="layer-link" href="https://github.com/Neguchads/navi-core">Inspect source ↗</a></div></div></div></section>
-<section id="engineering" data-view hidden><span class="mono accent">03 / Engineering</span><h1 style="margin:12px 0">Evidence before <span class="accent">claims.</span></h1><p>Reference workflow, with explicit boundaries between code verification and runtime acceptance.</p><div class="workflow"><article class="panel step"><span class="num">01</span><div><h3>Intake & scope</h3><p>Resolve material ambiguity; preserve existing architecture and license.</p></div><span class="tag">NEF guidance</span></article><article class="panel step"><span class="num">02</span><div><h3>Manifest & project gate</h3><p>Use the existing static-website profile and pinned NAVI Core workflow.</p></div><span class="tag">Core pilot</span></article><article class="panel step"><span class="num">03</span><div><h3>Reproducible build</h3><p>Bundle the engine, apply the reference shell, verify source/output parity.</p></div><span class="tag">Contract tests</span></article><article class="panel step"><span class="num">04</span><div><h3>Browser capture</h3><p>Generate real screenshots of the local interface; record provenance.</p></div><span class="tag">Visual evidence</span></article><article class="panel step"><span class="num">05</span><div><h3>Runtime acceptance</h3><p>Review WebGPU rendering, audio, controls and performance separately.</p></div><span class="tag">Manual gate</span></article></div><div class="heading"><h2>Engineering records</h2></div><div class="cards"><article class="panel"><h3>Architecture / Roadmap / Handoff</h3><p>Project decisions, evidence and open acceptance criteria.</p><a href="docs/ENGINEERING.md">Read engineering record ↗</a></article><article class="panel"><h3>Source & automation</h3><p>Review the repository and actual workflow runs.</p><a href="https://github.com/Neguchads/navyv-abyss/actions">Inspect GitHub Actions ↗</a></article></div></section>
-</main></div><footer class="footer"><span>NAVYV ABYSS / Neguchads · Reference 01 · Experimental</span><span>Credits: <a href="https://github.com/Noniv/abyssal-garden">Abyssal Garden — Maksymilian Dendura</a> · <a href="LICENSE">MIT</a></span></footer></div>
-<script>
-const views=[...document.querySelectorAll('[data-view]')],tabs=[...document.querySelectorAll('[data-tab]')];function selectView(){const requested=location.hash.slice(1),active=views.some(v=>v.id===requested)?requested:'overview';views.forEach(v=>v.hidden=v.id!==active);tabs.forEach(t=>{if(t.dataset.tab===active)t.setAttribute('aria-current','page');else t.removeAttribute('aria-current')})}addEventListener('hashchange',selectView);selectView();
-const layers={core:['NAVI Core','Pinned project verification and manifest contracts. The static-website pilot is not a GPU runtime test.','https://github.com/Neguchads/navi-core'],nef:['NEF','Adaptable reference profiles, engineering documentation, roadmap and handoff. Policies are advisory.','https://github.com/Neguchads/navi-core/blob/main/docs/NEF.md'],graph:['NAVI Graphify','Public project catalog. The local map is curated and does not fetch live graph data.','https://github.com/Neguchads/navi-graphify'],home:['GitHub Homepage','Public portfolio generator and consumer of the shared presentation theme.','https://github.com/Neguchads/github-homepage']};document.querySelectorAll('[data-layer]').forEach(b=>b.addEventListener('click',()=>{const [title,desc,url]=layers[b.dataset.layer];document.querySelectorAll('[data-layer]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));document.getElementById('layer-title').textContent=title;document.getElementById('layer-desc').textContent=desc;document.getElementById('layer-link').href=url}));
-</script></body></html>
+:root{color-scheme:dark;--ink:#030814;--cyan:#63daff;--line:#335568;--text:#e4f4ff;--muted:#9ebbd0;font:14px/1.45 system-ui,sans-serif}*{box-sizing:border-box}body{margin:0;background:var(--ink);color:var(--text);overflow:hidden}button,input,select,a{font:inherit}button,input,select{color:var(--text);background:#091827;border:1px solid #31566e;border-radius:6px;padding:9px 12px}button{cursor:pointer}button:hover,button[aria-pressed=true]{border-color:var(--cyan);color:var(--cyan);background:#10364a}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #fff;outline-offset:3px}a{color:var(--cyan);text-decoration:none}a:hover{text-decoration:underline}#scene{position:fixed;inset:0;width:100%;height:100%;touch-action:none;cursor:grab}#scene:active{cursor:grabbing}header{position:absolute;top:22px;left:28px;right:28px;display:flex;justify-content:space-between;align-items:center;gap:15px;pointer-events:none}header>*{pointer-events:auto}.brand{display:flex;gap:12px;align-items:center}.brand svg{width:46px;height:46px}.brand strong{font-size:23px;letter-spacing:.06em}.brand strong span{color:var(--cyan)}.brand small,.eyebrow{display:block;font:11px/1.5 ui-monospace,monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}.modes{display:flex;gap:7px;flex-wrap:wrap}.modes button{background:#071523e8}.title{position:absolute;top:105px;left:30px;pointer-events:none;text-shadow:0 3px 20px #000;max-width:470px}.title h1{font-size:clamp(28px,3.5vw,55px);line-height:1.02;letter-spacing:-.05em;margin:8px 0;font-weight:650}.title h1 span{color:var(--cyan)}.title p{margin:10px 0;color:#bbd1df;max-width:34ch}.glass{background:linear-gradient(145deg,#091a2be8,#050e19ed);border:1px solid #34596b;border-radius:12px;box-shadow:0 12px 40px #0006;backdrop-filter:blur(8px)}#inspector{position:absolute;right:28px;top:100px;width:294px;padding:20px;max-height:calc(100dvh - 230px);overflow:auto}h2,h3,p{margin:0}#inspector h2{font-size:25px;letter-spacing:-.04em;margin:6px 0;overflow-wrap:anywhere}#inspector p{color:var(--muted);font-size:13px;margin:9px 0}#sector{color:var(--cyan);font:11px ui-monospace,monospace;letter-spacing:.11em}#repoSlug{font:12px ui-monospace,monospace;overflow-wrap:anywhere}.action{display:block;text-align:center;background:var(--cyan);color:#06131d;border-radius:6px;padding:10px;margin:15px 0 7px;font-weight:750}.action:hover{color:#06131d;background:#b3f2ff;text-decoration:none}#focus{width:100%}hr{border:0;border-top:1px solid #284555;margin:17px 0}#related{display:grid;gap:7px}#related button{text-align:left;font-size:12px;padding:8px 10px}#related small{display:block;color:var(--muted)}.dock{position:absolute;left:28px;bottom:25px;right:28px;padding:14px 18px;display:flex;gap:14px;align-items:center;flex-wrap:wrap}.dock strong{font-size:13px}.dock .field{display:grid;gap:4px}.dock input{width:205px}.dock select{max-width:205px}.dock .spacer{flex:1}.dock .stat{font:12px ui-monospace,monospace;color:var(--cyan)}.dock a{font-size:12px}.legend{position:absolute;bottom:130px;left:30px;display:grid;gap:6px;font-size:12px;color:#c0d6e5;pointer-events:none;text-shadow:0 1px 8px #000}.legend span{display:flex;gap:8px;align-items:center}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;box-shadow:0 0 8px currentColor}.help{position:absolute;bottom:129px;right:30px;font:11px ui-monospace,monospace;color:#9ebbd0;pointer-events:none;text-shadow:0 1px 6px #000}.hidden{display:none!important}#empty{color:#ffc98a}.directory{position:absolute;inset:96px 28px 120px;overflow:auto;padding:24px;z-index:5}.directory h2{font-size:25px}.directory .list{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:10px;margin-top:18px}.directory .list button{text-align:left;min-height:60px}.directory .list small{display:block;color:var(--muted)}.directory .close{float:right}#labels{position:absolute;inset:0;pointer-events:none;overflow:hidden}#labels button{position:absolute;transform:translate(-50%,10px);pointer-events:auto;background:#071625b9;border:1px solid #33556888;font:10px/1.2 ui-monospace,monospace;padding:3px 6px;white-space:nowrap;border-radius:4px;color:#c7ebfc;box-shadow:0 1px 12px #0006}#labels button[aria-pressed=true]{border-color:#63daff;background:#10344a;color:white;font-weight:700}#labels button:hover{border-color:white}.modecaption{color:#6de8ff}#error{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);max-width:340px;padding:20px}.credits{font-size:11px;color:var(--muted)}.cinema header,.cinema .title,.cinema #inspector,.cinema .legend,.cinema .help,.cinema #labels{display:none}.cinema .dock{right:auto;padding:8px}.cinema .dock>*:not(#cinema){display:none}
+@media(max-width:780px){header{left:12px;right:12px;top:10px;align-items:flex-start}.brand svg{width:32px;height:32px}.brand strong{font-size:16px}.brand small{font-size:8px}.modes{justify-content:flex-end;gap:3px}.modes button{font-size:11px;padding:6px 7px}.title{top:78px;left:15px;max-width:50vw}.title p{display:none}.title h1{font-size:26px}#inspector{right:12px;top:75px;width:190px;padding:11px;max-height:42vh}#inspector h2{font-size:17px}#inspector p{font-size:11px}#related{display:none}#inspector hr{display:none}.dock{left:12px;right:12px;bottom:12px;padding:10px;gap:7px}.dock input{width:135px}.dock select{max-width:130px}.dock button{padding:7px}.dock .stat{font-size:10px}.dock .spacer,.dock .credits,.help{display:none}.legend{left:15px;bottom:120px;font-size:10px}.directory{inset:70px 12px 120px;padding:12px}#labels button{font-size:9px}}
+</style></head><body>
+<canvas id="scene" aria-label="Interactive perspective 3D cosmic ocean and repository stars"></canvas><div id="labels" aria-label="Repository stars"></div>
+<header><div class="brand"><svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#d7e5ef" d="M4 40 15 7h7l13 18 9-18-10 33h-6L15 22 9 40Z"/><path fill="#63daff" d="m16 45 12-15 6 9Z"/></svg><div><strong>NAVI <span>ABYSS</span></strong><small>NAVI-OS / COSMIC ENGINEERING UNIVERSE</small></div></div><nav class="modes" aria-label="Exploration modes"><button data-mode="ocean" aria-pressed="true">Ocean</button><button data-mode="graph" aria-pressed="false">Star graph</button><button data-mode="fleet" aria-pressed="false">Fleet</button><button id="directoryToggle" aria-expanded="false">Directory</button></nav></header>
+<section class="title"><span class="eyebrow modecaption" id="modeCaption">01 / ORBITAL OCEAN</span><h1 id="headline">Beyond the <span>horizon.</span></h1><p id="modeDescription">Navigate a sea suspended in the cosmos. Every named star is a real public repository.</p></section>
+<aside id="inspector" class="glass" aria-label="Selected repository"><span class="eyebrow">STAR / REPOSITORY INSPECTOR</span><span id="sector"></span><h2 id="repoName"></h2><div id="repoSlug"></div><p id="repoDesc"></p><a id="repoLink" class="action" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a><button id="focus">Navigate to star</button><hr><span class="eyebrow">Documented integrations</span><div id="related"></div><p>Constellation membership is curated, not an AST dependency.</p></aside>
+<div class="legend" id="legend"><span><i class="dot" style="background:#d4f5ff;color:#d4f5ff"></i> Named star = repository</span><span>— Documented integration · - - Category membership</span><span>Faint particles = cosmic dust</span></div>
+<div class="help">DRAG ORBIT · SCROLL ZOOM · WASD PAN · CLICK A STAR</div>
+<div class="dock glass"><div class="field"><label class="eyebrow" for="search">Find a star</label><input id="search" type="search" placeholder="Repository name"></div><div class="field"><label class="eyebrow" for="filter">Constellation</label><select id="filter"><option value="all">All constellations</option></select></div><button id="edges" aria-pressed="true">Routes</button><button id="reset">Reset orbit</button><button id="cinema" aria-pressed="false">Cinematic</button><div class="spacer"></div><div><span id="count" class="stat"></span><span class="eyebrow">PUBLIC CATALOG SNAPSHOT</span></div><div class="credits"><a href="index.html">Legacy WebGPU dive</a> · <a href="docs/CAPTURES.md">Evidence</a><br><a href="https://github.com/Neguchads/navi-graphify">Graphify catalog</a> · <a href="LICENSE">MIT</a></div></div>
+<section id="directory" class="directory glass hidden" aria-label="Accessible repository directory"><button class="close" id="closeDirectory">Close</button><span class="eyebrow">Repository index</span><h2>Navigate by name</h2><p>Choose a public repository to inspect its star and open GitHub.</p><div id="directoryList" class="list"></div><p id="empty" hidden>No matching repositories.</p></section>
+<p id="error" class="glass hidden">The graphical canvas is unavailable. Open the directory to navigate repositories.</p>
+<script id="catalog" type="application/json">{
+  "schema_version": 1,
+  "owner": "Neguchads",
+  "relationship": "curated-membership",
+  "sectors": [
+    {
+      "id": "games",
+      "en": "Game engineering",
+      "pt": "Engenharia de jogos",
+      "desc": [
+        "Static recompilation, native runtimes and preservation.",
+        "Recompilação estática, runtimes nativos e preservação."
+      ],
+      "color": "#00b3ff",
+      "pos": [
+        -3,
+        0,
+        3
+      ],
+      "repos": [
+        [
+          "chad-recomp",
+          "Chad Standard Recomp"
+        ],
+        [
+          "cdos-nintendods-recomp",
+          "Dawn of Sorrow"
+        ],
+        [
+          "ccod-xbox-recomp",
+          "Curse of Darkness"
+        ],
+        [
+          "csotn-saturn-recomp",
+          "Symphony of the Night"
+        ]
+      ]
+    },
+    {
+      "id": "ai",
+      "en": "AI \u0026 automation",
+      "pt": "IA e automação",
+      "desc": [
+        "AI-assisted creation and visual workflows.",
+        "Criação assistida por IA e fluxos de trabalho visuais."
+      ],
+      "color": "#63daff",
+      "pos": [
+        3,
+        0,
+        3
+      ],
+      "repos": [
+        [
+          "ScriptForge",
+          "ScriptForge"
+        ],
+        [
+          "comfyui",
+          "PoseClone / ComfyUI"
+        ]
+      ]
+    },
+    {
+      "id": "apps",
+      "en": "Applications",
+      "pt": "Aplicações",
+      "desc": [
+        "Data visualization and web applications.",
+        "Visualização de dados e aplicações web."
+      ],
+      "color": "#818cf8",
+      "pos": [
+        3,
+        0,
+        -3
+      ],
+      "repos": [
+        [
+          "starlight-bi",
+          "Starlight BI"
+        ],
+        [
+          "favorite-manager",
+          "Favorite Manager"
+        ]
+      ]
+    },
+    {
+      "id": "tools",
+      "en": "Developer tools",
+      "pt": "Ferramentas de desenvolvimento",
+      "desc": [
+        "Knowledge graphs, reusable configuration and evidence-driven engineering.",
+        "Grafos de conhecimento, configuração reutilizável e engenharia orientada a evidências."
+      ],
+      "color": "#a9c3d9",
+      "pos": [
+        -3,
+        0,
+        -3
+      ],
+      "repos": [
+        [
+          "spec-to-proof",
+          "Spec-to-Proof"
+        ],
+        [
+          "codex-config-universal",
+          "Codex Universal Config"
+        ],
+        [
+          "github-homepage",
+          "GitHub Homepage"
+        ],
+        [
+          "navi-graphify",
+          "NAVI Graphify"
+        ],
+        [
+          "Neguchads",
+          "Neguchads Profile"
+        ],
+        [
+          "navi-abyss",
+          "NAVI Abyss"
+        ],
+        [
+          "navi-core",
+          "NAVI Core"
+        ]
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "source": "navi-graphify",
+      "target": "github-homepage",
+      "kind": "catalog-provider"
+    },
+    {
+      "source": "github-homepage",
+      "target": "Neguchads",
+      "kind": "visualization-provider"
+    },
+    {
+      "source": "Neguchads",
+      "target": "navi-graphify",
+      "kind": "project-discovery"
+    },
+    {
+      "source": "navi-abyss",
+      "target": "github-homepage",
+      "kind": "immersive-theme-provider"
+    },
+    {
+      "source": "Neguchads",
+      "target": "navi-abyss",
+      "kind": "public-experience-publisher"
+    },
+    {
+      "source": "navi-core",
+      "target": "navi-abyss",
+      "kind": "verification-provider"
+    }
+  ],
+  "source": {
+    "repository": "Neguchads/navi-graphify",
+    "commit": "c5431ad0d130d2ac5e2c6a4243daab213805c06e",
+    "path": "integrations/portfolio/catalog.json",
+    "verified_public_on": "2026-11-25"
+  }
+}</script>
+<script>(function cosmic(){
+"use strict";
+const $=id=>document.getElementById(id), catalog=JSON.parse($("catalog").textContent), canvas=$("scene"),ctx=canvas.getContext("2d");
+const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches, capture=new URLSearchParams(location.search).has("capture");
+const TAU=Math.PI*2, clamp=(x,a,b)=>Math.max(a,Math.min(b,x)), mix=(a,b,t)=>a+(b-a)*t, dot=(a,b)=>a[0]*b[0]+a[1]*b[1]+a[2]*b[2], sub=(a,b)=>a.map((x,i)=>x-b[i]), cross=(a,b)=>[a[1]*b[2]-a[2]*b[1],a[2]*b[0]-a[0]*b[2],a[0]*b[1]-a[1]*b[0]], unit=v=>{const l=Math.hypot(...v)||1;return v.map(x=>x/l)};
+let seed=7001;function rand(){seed=(Math.imul(seed,1664525)+1013904223)>>>0;return seed/4294967296}
+const centers={games:[-27,18,-12],ai:[26,23,-17],apps:[25,15,17],tools:[-8,25,14]}, palette={games:"#b9a0ff",ai:"#63e3ff",apps:"#65f1cb",tools:"#e3edff"};
+const nodes=[],byId=new Map();
+for(const sector of catalog.sectors){
+ const c=centers[sector.id]||[0,20,0];const option=document.createElement("option");option.value=sector.id;option.textContent=sector.en;$("filter").append(option);
+ sector.repos.forEach(([id,name],i)=>{
+ const angle=i*TAU/sector.repos.length+.23, radius=sector.repos.length>4?10.5:7.7;
+ const n={id,name,sector:sector.id,category:sector.en,desc:sector.desc[0],color:palette[sector.id]||sector.color,p:[c[0]+Math.cos(angle)*radius,c[1]+((i%3)-1)*5.7,c[2]+Math.sin(angle)*radius]};
+ const b=document.createElement("button");b.textContent=name;b.type="button";b.setAttribute("aria-label","Inspect "+id);b.setAttribute("aria-pressed","false");b.addEventListener("click",()=>select(id,true));$("labels").append(b);n.label=b;nodes.push(n);byId.set(id,n);
+ });
+ const span=document.createElement("span"),i=document.createElement("i");i.className="dot";i.style.background=i.style.color=palette[sector.id]||sector.color;span.append(i,document.createTextNode(sector.en));$("legend").append(span);
+}
+const links=catalog.integrations.filter(e=>byId.has(e.source)&&byId.has(e.target));
+const memberships=[];for(const s of catalog.sectors){const a=nodes.filter(n=>n.sector===s.id);for(let i=0;i<a.length-1;i++)memberships.push([a[i],a[i+1]])}
+let selected=byId.get("navi-abyss")||nodes[0],mode="ocean",route=true,visible=new Set(nodes.map(n=>n.id)),W=0,H=0,DPR=1,focusTarget=[0,7,0],center=[0,7,0],yaw=.34,pitch=.34,distance=116,destDistance=116,drag=null,projected=[],t=0,frame=0;
+const presets={ocean:{yaw:.34,pitch:.34,d:116,c:[0,7,0],caption:"01 / ORBITAL OCEAN",title:"Beyond the horizon.",desc:"Navigate a sea suspended in the cosmos. Every named star is a real public repository."},graph:{yaw:.15,pitch:.53,d:104,c:[0,20,0],caption:"02 / STELLAR GRAPH",title:"Knowledge constellation.",desc:"Explore category membership and documented integration routes between repositories."},fleet:{yaw:-.58,pitch:.21,d:83,c:[1,2,3],caption:"03 / NAVAL EXPLORATION",title:"Sail the void.",desc:"Flying ships traverse the suspended water. Select any star to chart a destination."}};
+function select(id,travel=false){const n=byId.get(id);if(!n)return;selected=n;for(const x of nodes)x.label.setAttribute("aria-pressed",String(x===n));$("sector").textContent=n.category.toUpperCase();$("repoName").textContent=n.name;$("repoSlug").textContent=catalog.owner+"/"+n.id;$("repoDesc").textContent=n.desc+" · Category description, not project telemetry.";$("repoLink").href="https://github.com/"+catalog.owner+"/"+n.id;$("related").replaceChildren();let found=0;for(const e of links){if(e.source!==id&&e.target!==id)continue;const other=byId.get(e.source===id?e.target:e.source);const b=document.createElement("button"),s=document.createElement("small");b.type="button";b.textContent=other.name;s.textContent=(e.source===id?"→ ":"← ")+e.kind;b.append(s);b.onclick=()=>select(other.id,true);$("related").append(b);found++}if(!found){const p=document.createElement("p");p.textContent="No documented integration in this snapshot.";$("related").append(p)}if(travel)focus(n)}
+function focus(n){focusTarget=[n.p[0]*.62,n.p[1]*.8,n.p[2]*.62];destDistance=mode==="fleet"?65:78}
+function setMode(m){if(!presets[m])m="ocean";mode=m;const p=presets[m];yaw=p.yaw;pitch=p.pitch;focusTarget=p.c.slice();center=p.c.slice();distance=destDistance=p.d;$("modeCaption").textContent=p.caption;$("headline").textContent=p.title;$("modeDescription").textContent=p.desc;for(const b of document.querySelectorAll("[data-mode]"))b.setAttribute("aria-pressed",String(b.dataset.mode===m));if(location.hash!=="#"+m)history.replaceState(null,"","#"+m)}
+function updateFilter(){const q=$("search").value.trim().toLowerCase(),s=$("filter").value;visible=new Set(nodes.filter(n=>(s==="all"||s===n.sector)&&(!q||(n.id+" "+n.name).toLowerCase().includes(q))).map(n=>n.id));$("count").textContent=visible.size+" / "+nodes.length+" REPOSITORIES";$("directoryList").replaceChildren();for(const n of nodes.filter(n=>visible.has(n.id))){const b=document.createElement("button"),sm=document.createElement("small");b.type="button";b.textContent=n.name;sm.textContent=n.category+" · "+n.id;b.append(sm);b.onclick=()=>{select(n.id,true);directory(false)};$("directoryList").append(b)}$("empty").hidden=visible.size>0;for(const n of nodes)n.label.hidden=!visible.has(n.id)}
+function directory(open){$("directory").classList.toggle("hidden",!open);$("directoryToggle").setAttribute("aria-expanded",String(open));if(open)$("closeDirectory").focus();else $("directoryToggle").focus()}
+$("directoryToggle").onclick=()=>directory($("directory").classList.contains("hidden"));$("closeDirectory").onclick=()=>directory(false);$("search").oninput=updateFilter;$("filter").onchange=updateFilter;$("focus").onclick=()=>focus(selected);$("edges").onclick=()=>{route=!route;$("edges").setAttribute("aria-pressed",String(route))};$("reset").onclick=()=>setMode(mode);$("cinema").onclick=()=>{let a=document.body.classList.toggle("cinema");$("cinema").setAttribute("aria-pressed",String(a));$("cinema").textContent=a?"Exit cinematic":"Cinematic"};for(const b of document.querySelectorAll("[data-mode]"))b.onclick=()=>setMode(b.dataset.mode);addEventListener("hashchange",()=>setMode(location.hash.slice(1)));select(selected.id);updateFilter();setMode(location.hash.slice(1));
+if(!ctx){$("error").classList.remove("hidden");directory(true);return}
+function resize(){W=innerWidth;H=innerHeight;DPR=Math.min(devicePixelRatio||1,1.5);canvas.width=Math.round(W*DPR);canvas.height=Math.round(H*DPR);ctx.setTransform(DPR,0,0,DPR,0,0)}addEventListener("resize",resize);resize();
+canvas.addEventListener("pointerdown",e=>{drag={x:e.clientX,y:e.clientY,sx:e.clientX,sy:e.clientY};canvas.setPointerCapture(e.pointerId)});canvas.addEventListener("pointermove",e=>{if(!drag)return;yaw-=(e.clientX-drag.x)*.006;pitch=clamp(pitch+(e.clientY-drag.y)*.005,-.12,1.28);drag.x=e.clientX;drag.y=e.clientY});canvas.addEventListener("pointerup",e=>{if(drag&&Math.hypot(e.clientX-drag.sx,e.clientY-drag.sy)<7){const hits=projected.filter(p=>Math.hypot(p.x-e.clientX,p.y-e.clientY)<24).sort((a,b)=>Math.hypot(a.x-e.clientX,a.y-e.clientY)-Math.hypot(b.x-e.clientX,b.y-e.clientY));if(hits[0])select(hits[0].n.id,true)}drag=null});canvas.addEventListener("pointercancel",()=>drag=null);canvas.addEventListener("wheel",e=>{e.preventDefault();destDistance=clamp(destDistance*Math.exp(e.deltaY*.001),35,210)},{passive:false});
+addEventListener("keydown",e=>{if(e.target.matches("input,select,button,a"))return;if(e.key==="Escape"){if(document.body.classList.contains("cinema"))$("cinema").click();else if(!$("directory").classList.contains("hidden"))directory(false);return}const k=e.key.toLowerCase(),r=[Math.cos(yaw),0,-Math.sin(yaw)],f=[-Math.sin(yaw),0,-Math.cos(yaw)];let v=k==="a"?r.map(x=>-x):k==="d"?r:k==="w"?f:k==="s"?f.map(x=>-x):null;if(v){e.preventDefault();focusTarget=focusTarget.map((x,i)=>x+v[i]*3)}});
+const dust=Array.from({length:540},()=>({a:rand()*TAU,b:(rand()-.5)*Math.PI,r:rand()*.9+.18,alpha:rand()*.5+.1}));
+const drops=Array.from({length:75},()=>{const a=rand()*TAU,r=33+rand()*18;return {p:[Math.cos(a)*r,-7-rand()*15,Math.sin(a)*r*.74],size:.12+rand()*.36,phase:rand()*TAU}});
+let cam,right,up,forward,focal,cx,cy;
+function camera(){cam=[center[0]+Math.sin(yaw)*Math.cos(pitch)*distance,center[1]+Math.sin(pitch)*distance,center[2]+Math.cos(yaw)*Math.cos(pitch)*distance];forward=unit(sub(center,cam));right=unit(cross(forward,[0,1,0]));up=cross(right,forward);focal=Math.min(W*.88,H*.97);cx=W>780?W*.46:W*.47;cy=H*.51}
+function proj(p){const v=sub(p,cam),z=dot(v,forward);if(z<1)return null;return {x:cx+focal*dot(v,right)/z,y:cy-focal*dot(v,up)/z,z,scale:focal/z}}
+function poly(p,fill,stroke,width=.5){if(p.some(x=>!x))return;ctx.beginPath();ctx.moveTo(p[0].x,p[0].y);for(let i=1;i<p.length;i++)ctx.lineTo(p[i].x,p[i].y);ctx.closePath();if(fill){ctx.fillStyle=fill;ctx.fill()}if(stroke){ctx.strokeStyle=stroke;ctx.lineWidth=width;ctx.stroke()}}
+function line(a,b,color,width=1,dash=[]){if(!a||!b)return;ctx.beginPath();ctx.setLineDash(dash);ctx.strokeStyle=color;ctx.lineWidth=width;ctx.moveTo(a.x,a.y);ctx.lineTo(b.x,b.y);ctx.stroke();ctx.setLineDash([])}
+function halo(x,y,r,color,alpha=.65){if(r<=0)return;const g=ctx.createRadialGradient(x,y,0,x,y,r);g.addColorStop(0,color);g.addColorStop(.18,color);g.addColorStop(1,"transparent");ctx.globalAlpha=alpha;ctx.fillStyle=g;ctx.fillRect(x-r,y-r,2*r,2*r);ctx.globalAlpha=1}
+function background(){const g=ctx.createLinearGradient(0,0,W,H);g.addColorStop(0,"#030713");g.addColorStop(.5,"#08142b");g.addColorStop(1,"#020811");ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+ for(const [x,y,r,col] of [[W*.27,H*.42,H*.65,"#103d5d55"],[W*.72,H*.27,H*.48,"#482e7850"],[W*.51,H*.72,H*.58,"#007e9038"]]){const q=ctx.createRadialGradient(x,y,0,x,y,r);q.addColorStop(0,col);q.addColorStop(1,"transparent");ctx.fillStyle=q;ctx.fillRect(0,0,W,H)}
+ for(const d of dust){const a=d.a-yaw*.11,b=d.b-pitch*.055,x=((a/TAU*W)%W+W)%W,y=(b/Math.PI+.5)*H;ctx.fillStyle="rgba(170,208,235,"+d.alpha+")";ctx.fillRect(x,y,d.r,d.r)}
+}
+function wave(x,z,time){return .85*Math.sin(x*.19+z*.12+time*.8)+.46*Math.sin(z*.32-x*.1-time*.75)+.18*Math.cos(x*.73+z*.49+time)}
+function water(time){const faces=[],rings=16,segments=64,verts=[];for(let i=0;i<=rings;i++){const row=[];for(let j=0;j<=segments;j++){const a=j/segments*TAU,r=i/rings,edge=1+.065*Math.sin(a*3)+.034*Math.cos(a*7),x=Math.cos(a)*r*46*edge,z=Math.sin(a)*r*33*edge;row.push([x,wave(x,z,time),z])}verts.push(row)}
+ for(let i=0;i<rings;i++)for(let j=0;j<segments;j++){const a=verts[i][j],b=verts[i+1][j],c=verts[i+1][j+1],d=verts[i][j+1],normal=unit(cross(sub(d,a),sub(b,a))),light=Math.abs(dot(normal,unit([-.4,1,.35]))),spark=.5+.5*Math.sin((a[0]+a[2])*.45+time*1.1),rim=i/rings;const col="rgba("+Math.round(9+24*light+12*spark)+","+Math.round(36+72*light+22*spark)+","+Math.round(63+87*light+30*spark)+","+(mode==="graph"?.42:.88)+")";const p=[a,b,c,d].map(proj);if(p.every(Boolean))faces.push({p,depth:p.reduce((s,x)=>s+x.z,0)/4,col,edge:spark>.88&&i%2===0?"#8de9ff45":null})}
+ for(let j=0;j<segments;j++){const a=verts[rings][j],b=verts[rings][j+1],c=[b[0]*.91,-5.5+wave(b[0],b[2],time)*.6,b[2]*.91],d=[a[0]*.91,-5.5+wave(a[0],a[2],time)*.6,a[2]*.91],p=[a,b,c,d].map(proj);if(p.every(Boolean))faces.push({p,depth:p.reduce((s,x)=>s+x.z,0)/4,col:"rgba(7,34,70,.8)",edge:"#41cdeb35"})}
+ faces.sort((a,b)=>b.depth-a.depth);for(const f of faces)poly(f.p,f.col,f.edge);
+ // Luminous surface currents and a suspended, open rim.
+ for(let r of [.35,.58,.78,1]){ctx.beginPath();let first=true;for(let j=0;j<=segments;j++){const a=j/segments*TAU,edge=1+.065*Math.sin(a*3)+.034*Math.cos(a*7),x=Math.cos(a)*r*46*edge,z=Math.sin(a)*r*33*edge,p=proj([x,wave(x,z,time)+.15,z]);if(!p)continue;if(first){ctx.moveTo(p.x,p.y);first=false}else ctx.lineTo(p.x,p.y)}ctx.strokeStyle=r===1?"#75f2ffa0":"#44c4df38";ctx.lineWidth=r===1?2.4:.8;ctx.stroke()}
+ for(let i=0;i<drops.length;i++){const d=drops[i],p=proj([d.p[0],d.p[1]+Math.sin(time+d.phase)*.7,d.p[2]]);if(p){ctx.fillStyle="#41c9f080";ctx.beginPath();ctx.ellipse(p.x,p.y,d.size*p.scale,d.size*p.scale*1.7,0,0,TAU);ctx.fill()}}
+}
+const hullVertices=[[-5,0,-2.1],[-5,0,2.1],[2.7,0,2.1],[6,0,0],[2.7,0,-2.1],[-3.8,-1.3,-1.1],[-3.8,-1.3,1.1],[2,-1.3,1.1],[4,-.65,0],[2,-1.3,-1.1],[-2,0,-1.45],[-2,0,1.45],[1.5,0,1.45],[1.5,0,-1.45],[-1.8,1.65,-1.05],[-1.8,1.65,1.05],[.9,1.65,1.05],[.9,1.65,-1.05],[-.7,3.35,0],[-.7,1.65,0],[-3,0,3.25],[1,0,3.25],[-3,0,-3.25],[1,0,-3.25]];
+const hullFaces=[[[0,1,2,3,4],"#718fa4"],[[0,4,9,5],"#243b52"],[[1,6,7,2],"#48677d"],[[2,7,8,3],"#718c9f"],[[3,8,9,4],"#37586d"],[[5,9,8,7,6],"#122737"],[[10,11,15,14],"#5b7890"],[[11,12,16,15],"#92acba"],[[12,13,17,16],"#4b738d"],[[13,10,14,17],"#29465f"],[[14,15,16,17],"#acc6d2"],[[1,20,21,2],"#346985"],[[0,4,23,22],"#346985"]];
+function ship(pos,heading,size){const cs=Math.cos(heading),sn=Math.sin(heading),v=hullVertices.map(([x,y,z])=>proj([pos[0]+size*(x*cs-z*sn),pos[1]+size*y,pos[2]+size*(x*sn+z*cs)]));const faces=hullFaces.map(([ids,c])=>({p:ids.map(i=>v[i]),c})).filter(f=>f.p.every(Boolean));faces.sort((a,b)=>b.p.reduce((s,p)=>s+p.z,0)/b.p.length-a.p.reduce((s,p)=>s+p.z,0)/a.p.length);for(const f of faces)poly(f.p,f.c,"#82c5e166",.75);line(v[19],v[18],"#e0f8ff",1.5);line(v[18],v[17],"#63daff70",1);line(v[1],v[2],"#83f4ff",2.4);line(v[0],v[4],"#83f4ff",2.4);for(const p of [v[5],v[6],v[20],v[22]])if(p)halo(p.x,p.y,Math.max(4,p.scale*.9),"#57dcff",.65);const stern=v[0];if(stern){const p=proj([pos[0]-cs*size*12,pos[1]-.4,pos[2]-sn*size*12]);line(stern,p,"#35c6fa60",2)}}
+function fleet(time){const ships=[{p:[-19+Math.sin(time*.22)*4,5.5+Math.sin(time)*.35,9],a:-.42,s:1.7},{p:[14+Math.cos(time*.18)*4,8+Math.sin(time*.8)*.45,-8],a:.7,s:1.35},{p:[8,4.8+Math.cos(time*.9)*.3,22+Math.sin(time*.2)*3],a:-1.1,s:.93}];ships.sort((a,b)=>(proj(b.p)?.z||0)-(proj(a.p)?.z||0));for(const s of ships)ship(s.p,s.a,s.s);const destination=proj(selected.p),origin=proj(ships[0].p);if(mode==="fleet"&&route)line(origin,destination,"#72f2ffa0",1.2,[6,7])}
+function stars(time){const pmap=new Map(nodes.map(n=>[n.id,proj(n.p)]));if(route){for(const [a,b] of memberships)if(visible.has(a.id)&&visible.has(b.id))line(pmap.get(a.id),pmap.get(b.id),"#7cb8d84d",1,[3,6]);for(const e of links){if(!visible.has(e.source)||!visible.has(e.target))continue;const active=e.source===selected.id||e.target===selected.id;line(pmap.get(e.source),pmap.get(e.target),active?"#a2f7ffe8":"#67c9ff95",active?2.1:1.15)}}
+ projected=[];for(const n of nodes){const p=pmap.get(n.id);if(!p||!visible.has(n.id)||p.x<0||p.x>W||p.y<0||p.y>H){n.label.hidden=true;continue}projected.push({...p,n})}projected.sort((a,b)=>b.z-a.z);
+ const used=[];for(const p of projected){const n=p.n,active=n===selected,r=clamp(p.scale*.52,3.4,8.2)*(active?1.35:1);halo(p.x,p.y,r*5,n.color,active?.75:.42);ctx.fillStyle=n.color;ctx.beginPath();ctx.arc(p.x,p.y,r,0,TAU);ctx.fill();ctx.fillStyle="#fff";ctx.beginPath();ctx.arc(p.x,p.y,r*.42,0,TAU);ctx.fill();line({x:p.x-r*2.2,y:p.y},{x:p.x+r*2.2,y:p.y},n.color,active?1.4:.8);line({x:p.x,y:p.y-r*2.2},{x:p.x,y:p.y+r*2.2},n.color,active?1.4:.8);if(active){ctx.beginPath();ctx.strokeStyle="#a7f5ff";ctx.lineWidth=1.1;ctx.setLineDash([3,4]);ctx.arc(p.x,p.y,r*2.8,0,TAU);ctx.stroke();ctx.setLineDash([])}}
+ for(const p of [...projected].sort((a,b)=>Number(b.n===selected)-Number(a.n===selected)||a.z-b.z)){const n=p.n,active=n===selected,w=Math.min(180,n.name.length*6.5+12),rect=[p.x-w/2,p.y+10,p.x+w/2,p.y+27],covered=used.some(q=>rect[0]<q[2]&&rect[2]>q[0]&&rect[1]<q[3]&&rect[3]>q[1]);n.label.hidden=!active&&covered;if(!n.label.hidden){used.push(rect);n.label.style.left=p.x+"px";n.label.style.top=p.y+"px";n.label.style.zIndex=active?"2":"1"}}
+}
+let prev=0;function render(now){if(!prev)prev=now;const dt=Math.min(.05,(now-prev)/1000);prev=now;if(!reduced&&!capture)t+=dt;const smooth=capture?1:1-Math.pow(.001,dt);center=center.map((x,i)=>mix(x,focusTarget[i],smooth));distance=mix(distance,destDistance,smooth);if(document.body.classList.contains("cinema")&&!reduced&&!capture)yaw+=dt*.055;camera();background();water(t);if(mode!=="graph")fleet(t);stars(t);frame++;if(frame===1){document.documentElement.dataset.rendered="true";document.documentElement.dataset.stars=String(nodes.length)}if(!capture)requestAnimationFrame(render)}
+requestAnimationFrame(render);
+})();</script>
+</body></html>

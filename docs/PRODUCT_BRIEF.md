@@ -1,5 +1,2 @@
-# NAVYV product brief
-Goal: an original NAVI-branded local reference dashboard plus the separate immersive WebGPU scene.
-Deliverables: dashboard with overview, architecture inspector and engineering workflow; deterministic scene shell; browser screenshots; README; credits.
-Constraints: offline-first, public links only, no fabricated telemetry, no old screenshots or funding links, no changes to upstream license or renderer.
-Acceptance: source/HTML parity, reference contract tests, three distinct browser captures, separate WebGPU runtime review.
+# NAVI Abyss — Product brief
+A navigable cosmic ocean in outer space, suspended procedural water, flying naval ships and constellations of public repository stars. Each named star maps to one actual public GitHub repository. Curated membership and documented integrations are visually distinct. Deliver an offline single-file HTML with perspective 3D geometry, camera navigation, filtering, inspector and cinematic presentation; keep the legacy WebGPU scene separate. No private data, fabricated metrics or upstream images. Capture real screenshots from the implementation.

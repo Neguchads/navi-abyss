@@ -1,4 +1,4 @@
-name: NAVYV reference contract
+name: NAVI reference contract
 on:
   pull_request:
     branches: [main]
@@ -6,7 +6,7 @@ on:
 permissions:
   contents: read
 concurrency:
-  group: navyv-reference-${{ github.ref }}
+  group: navi-reference-${{ github.ref }}
   cancel-in-progress: true
 jobs:
   reference:
@@ -26,6 +26,6 @@ jobs:
       - run: npm ci --ignore-scripts
       - run: npm run build
       - run: npm run verify
-      - run: git diff --exit-code -- ../index.html
-      - name: Capture local dashboard in read-only CI
-        run: bash ../scripts/capture-reference.sh "$RUNNER_TEMP/navyv-captures"
+      - run: git diff --exit-code -- ../index.html ../reference.html
+      - name: Capture cosmic scene in read-only CI
+        run: bash ../scripts/capture-reference.sh "$RUNNER_TEMP/navi-captures"
