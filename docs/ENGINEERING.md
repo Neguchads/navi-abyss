@@ -6,7 +6,7 @@ Status: experimental. Reference 01 in NAVI Engineering Universe.
 The existing static-website verification profile and pinned NAVI pilot remain authoritative. NEF is advisory. Do not rearrange upstream folders merely to match a reference.
 
 - `source/src/`: upstream procedural rendering, geometry, controls, audio and quality selection.
-- `source/template.html`: upstream UI template and engine DOM contract.
+- `source/template.html`: base NAVYV UI template and engine DOM contract.
 - `source/reference.mjs`: pure post-build composition, owns NAVYV branding and public navigation; applied by `source/build.mjs` to all build modes.
 - `index.html`: offline distributable; no fetch, AI calls or external asset requirements added.
 - `integration/universe.css`: existing consumer theme; unchanged for downstream compatibility.
@@ -27,8 +27,11 @@ Run from `source/`: `npm ci`, `npm run verify`, `npm run build`, then `npm run v
 | Public graph integration | Planned, not connected | Reviewed versioned public-only catalog; offline fallback |
 
 ## Handoff
-Scope: reference shell, README and tests. Original renderer, audio, license, package dependency versions and downstream CSS unchanged. The distributed engine script was preserved from the base artifact; the full esbuild rebuild and GPU runtime must be verified before treating this as release-ready. The earlier pilot checks tracked JS syntax only. No claim of live NAVI telemetry.
+Scope: reference shell, README and tests. Original renderer, audio, license, package dependency versions and downstream CSS unchanged. The distributed engine script was preserved from the base artifact; the full esbuild rebuild passed on the previous reference PR; GPU runtime must be verified before treating this as release-ready. The earlier pilot checks tracked JS syntax only. No claim of live NAVI telemetry.
 
-Decision: retain English as the existing project language; use the existing Neguchads navy/cyan palette and an adapted geometric mark. Preserve upstream credit and support links.
+Decision: retain English as the existing project language; use the existing Neguchads navy/cyan palette and an adapted geometric mark. Preserve upstream credit in the license and footer; remove legacy funding links.
 
 Next: review PR, run verification/build and visual smoke tests, then consider additional NEF reference profiles and actual graph integration. Rollback by reverting the reference commit; retain existing pilot.
+
+## Original dashboard and capture update
+`reference.html` is a separate offline, GPU-independent application with hash navigation and a curated layer inspector. The six inherited JPGs are removed from the current tree. Browser captures use `scripts/capture-reference.sh`; see [capture provenance](CAPTURES.md). The previous engine and preference storage keys are retained for compatibility. The original prompt is replaced by [our product brief](PRODUCT_BRIEF.md). No live graph or fabricated metrics.

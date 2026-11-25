@@ -1,0 +1,9 @@
+# Capture provenance
+The three PNGs in `.github/screenshots/` are generated from the local NAVYV `reference.html`, not copied from upstream and not image-generator mockups.
+
+Reproduce from the repository root:
+```sh
+bash scripts/capture-reference.sh
+```
+
+Requires Chromium or Chrome and Python 3. Set `CHROME_BIN` if needed. Desktop viewport: 1440 × 1060, device scale 1; one capture per hash view. The script validates PNG dimensions and distinct content hashes. Actual GPU scene captures are a separate acceptance task. No benchmark or live telemetry is inferred from these screenshots.

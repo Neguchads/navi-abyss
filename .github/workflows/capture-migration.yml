@@ -1,0 +1,29 @@
+name: Capture NAVYV reference (migration)
+on:
+  push:
+    branches: [navi/own-visuals-02]
+    paths: [reference.html, scripts/capture-reference.sh, .github/workflows/capture-migration.yml]
+permissions:
+  contents: read
+jobs:
+  capture:
+    if: github.repository == 'Neguchads/navyv-abyss' && github.ref == 'refs/heads/navi/own-visuals-02'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 8
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+        with:
+          persist-credentials: false
+      - run: bash scripts/capture-reference.sh
+      - name: Commit only generated captures to migration branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .github/screenshots/navi-overview.png .github/screenshots/navi-architecture.png .github/screenshots/navi-engineering.png
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "docs: capture actual NAVYV reference interface"
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)" push origin HEAD:refs/heads/navi/own-visuals-02
