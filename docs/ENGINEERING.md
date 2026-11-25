@@ -35,3 +35,5 @@ Next: review PR, run verification/build and visual smoke tests, then consider ad
 
 ## Original dashboard and capture update
 `reference.html` is a separate offline, GPU-independent application with hash navigation and a curated layer inspector. The six inherited JPGs are removed from the current tree. Browser captures use `scripts/capture-reference.sh`; see [capture provenance](CAPTURES.md). The previous engine and preference storage keys are retained for compatibility. The original prompt is replaced by [our product brief](PRODUCT_BRIEF.md). No live graph or fabricated metrics.
+
+Capture update: the initial three PNGs passed the capture script's dimension and distinct-hash checks. See [CAPTURES.md](CAPTURES.md) for the successful run. The one-time migration workflow is removed; the permanent reference workflow retains a read-only token.

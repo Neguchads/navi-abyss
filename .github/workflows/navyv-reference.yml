@@ -27,3 +27,5 @@ jobs:
       - run: npm run build
       - run: npm run verify
       - run: git diff --exit-code -- ../index.html
+      - name: Capture local dashboard in read-only CI
+        run: bash ../scripts/capture-reference.sh "$RUNNER_TEMP/navyv-captures"
