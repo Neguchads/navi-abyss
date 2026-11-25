@@ -248,6 +248,6 @@ function stars(time){const pmap=new Map(nodes.map(n=>[n.id,proj(n.p)]));if(route
  for(const p of [...projected].sort((a,b)=>Number(b.n===selected)-Number(a.n===selected)||a.z-b.z)){const n=p.n,active=n===selected,w=Math.min(180,n.name.length*6.5+12),rect=[p.x-w/2,p.y+10,p.x+w/2,p.y+27],covered=used.some(q=>rect[0]<q[2]&&rect[2]>q[0]&&rect[1]<q[3]&&rect[3]>q[1]);n.label.hidden=!active&&covered;if(!n.label.hidden){used.push(rect);n.label.style.left=p.x+"px";n.label.style.top=p.y+"px";n.label.style.zIndex=active?"2":"1"}}
 }
 let prev=0;function render(now){if(!prev)prev=now;const dt=Math.min(.05,(now-prev)/1000);prev=now;if(!reduced&&!capture)t+=dt;const smooth=capture?1:1-Math.pow(.001,dt);center=center.map((x,i)=>mix(x,focusTarget[i],smooth));distance=mix(distance,destDistance,smooth);if(document.body.classList.contains("cinema")&&!reduced&&!capture)yaw+=dt*.055;camera();background();water(t);if(mode!=="graph")fleet(t);stars(t);frame++;if(frame===1){document.documentElement.dataset.rendered="true";document.documentElement.dataset.stars=String(nodes.length)}if(!capture)requestAnimationFrame(render)}
-requestAnimationFrame(render);
+if(capture)render(0);else requestAnimationFrame(render);
 })();</script>
 </body></html>
