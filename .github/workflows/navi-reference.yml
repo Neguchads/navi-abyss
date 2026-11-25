@@ -29,3 +29,5 @@ jobs:
       - run: git diff --exit-code -- ../index.html ../reference.html
       - name: Capture cosmic scene in read-only CI
         run: bash ../scripts/capture-reference.sh "$RUNNER_TEMP/navi-captures"
+      - name: Browser interaction smoke
+        run: bash ../scripts/smoke-reference.sh

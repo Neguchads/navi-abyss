@@ -27,3 +27,6 @@ Run `cd source && npm ci && npm run build && npm run verify`. Verify determinist
 
 ## Handoff
 Scope: rename, original cosmic reference experience, public catalog snapshot, documentation and captures. Explicit decision: use native Canvas perspective projection to avoid new runtime dependencies and support offline/headless browser operation. Flying ships are animated scenery; users navigate the camera, not a simulated ship controller. Preserve upstream credits and do not imply production verification. Initial source snapshot comes from proposed Graphify catalog PR; merge/review it separately. Rollback by reverting the cosmic commits, retain Core pin and legacy engine. No automatic merge.
+
+## Capture evidence
+The initial browser capture job succeeded in all three modes after a headless frame timing correction; see [CAPTURES.md](CAPTURES.md). Add browser DOM smoke checks for directory, filter, selection, GitHub link, route toggle and mode switch. GPU performance, manual interaction and visual quality remain unverified. Final revision CI must pass before merge.

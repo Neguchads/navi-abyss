@@ -45,3 +45,9 @@ test('cosmic catalog and offline source/output contract', () => {
  assert.match(html,/function proj\(p\)/);assert.match(html,/function water\(time\)/);assert.match(html,/function ship\(pos,heading,size\)/);
  assert.doesNotMatch(html,/navyv-abyss/i);
 });
+
+test('committed cosmic captures have PNG signature, dimensions and distinct bytes', () => {
+ const buffers=['overview','architecture','engineering'].map(view=>readFileSync(new URL('../../.github/screenshots/navi-'+view+'.png',import.meta.url)));
+ for(const png of buffers){assert.equal(png.subarray(0,8).toString('hex'),'89504e470d0a1a0a');assert.equal(png.readUInt32BE(16),1440);assert.equal(png.readUInt32BE(20),1060);assert.ok(png.length>10000)}
+ for(let i=0;i<buffers.length;i++)for(let j=i+1;j<buffers.length;j++)assert.ok(!buffers[i].equals(buffers[j]));
+});
