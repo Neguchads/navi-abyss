@@ -1,0 +1,2 @@
+# NAVI Abyss — Product brief
+A navigable cosmic ocean in outer space, suspended procedural water, flying naval ships and constellations of public repository stars. Each named star maps to one actual public GitHub repository. Curated membership and documented integrations are visually distinct. Deliver an offline single-file HTML with perspective 3D geometry, camera navigation, filtering, inspector and cinematic presentation; keep the legacy WebGPU scene separate. No private data, fabricated metrics or upstream images. Capture real screenshots from the implementation.

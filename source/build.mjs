@@ -8,6 +8,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { transformSync } from 'esbuild';
 import { applyReference } from './reference.mjs';
+import '../cosmic/build.mjs';
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const FILES = ['quality.js', 'math.js', 'shaders.js', 'world.js', 'main.js', 'audio.js']; // concatenation order matters

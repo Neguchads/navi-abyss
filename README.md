@@ -1,121 +1,44 @@
-<p align="center"><img src=".github/assets/navyv-abyss.svg" alt="NAVYV Abyss — NAVI Engineering Universe" width="100%"></p>
+<p align="center"><img src=".github/assets/navi-abyss.svg" alt="NAVI Abyss — Cosmic Engineering Universe" width="100%"></p>
 
-<p align="center"><strong>Immersive engineering laboratory · WebGPU · Local-first</strong></p>
-<p align="center"><a href="#try-it">Explore</a> · <a href="docs/ENGINEERING.md">Architecture / Roadmap / Handoff</a> · <a href="https://github.com/Neguchads/navi-core">NAVI Core</a> · <a href="https://github.com/Neguchads/navi-core/blob/main/docs/NEF.md">NEF</a> · <a href="https://github.com/Neguchads/navi-graphify">Graphify</a></p>
+<p align="center"><strong>A cosmic ocean where repositories become stars and engineering becomes exploration.</strong></p>
+<p align="center"><a href="reference.html">Launch the 3D universe</a> · <a href="docs/ENGINEERING.md">Architecture / roadmap / handoff</a> · <a href="https://github.com/Neguchads/navi-graphify">Graphify</a> · <a href="https://github.com/Neguchads/navi-core">NAVI Core / NEF</a></p>
 
-NAVYV Abyss is the immersive presentation laboratory of the [NAVI Engineering Universe](https://github.com/Neguchads/Neguchads). It adapts the MIT-licensed [Abyssal Garden](https://github.com/Noniv/abyssal-garden) by Maksymilian Dendura, preserving its procedural underwater engine while adding a NAVI-branded reference shell, documented engineering boundaries and deterministic build integration.
+## Cosmic Engineering Universe
 
-| Layer | Responsibility | Evidence |
-|---|---|---|
-| Abyss | Procedural world, WebGPU renderer and synthesized audio | [Source](source/src) |
-| NAVYV | Reference interface, offline delivery and visual identity | [Composition module](source/reference.mjs) |
-| NAVI Core | Pinned static-website pilot gate | [Workflow](.github/workflows/navi-pilot.yml) |
-| NEF | Adaptable engineering references, roadmap and handoff | [Engineering record](docs/ENGINEERING.md) |
-| Universe / Graphify | Public ecosystem discovery, no live data ingestion in this scene | [Integration](integration/README.md) |
+Explore a suspended procedural ocean in deep space, flying naval vessels and constellations of actual public repositories. Every named star is a public GitHub repository; select it to inspect documented integrations and open the repository. Faint particles are cosmic dust. The graph uses the reviewed public catalog, not private graphs or invented dependencies.
 
-**Experimental.** The pilot is not WebGPU runtime certification. No AI provider, credentials, analytics or remote asset dependencies are required to explore the scene.
+![NAVI Abyss — cosmic ocean](.github/screenshots/navi-overview.png)
 
-![Kelp forest with a stone whale tail and a manta ray](.github/screenshots/whale-fluke.jpg)
-
-## Try it
-
-1. Download [`index.html`](index.html).
-2. Open it in **Chrome** or **Edge** on a desktop computer.
-3. Wait a few seconds while the world is built, then press **Dive in** and start swimming.
-
-Nothing to install, and it works offline. It needs a browser with **WebGPU**. If you see *"This scene needs WebGPU"*, update your browser or switch to Chrome / Edge.
-
-## What's down there
-
-- **Kelp forests** that sway in the current and sparkle with tiny gold and green specks
-- **Light rays** streaming down from a wavy surface, with shimmering caustics on the sea floor
-- **A sunken wooden ship**, a **giant stone whale tail**, rock arches, canyons and floating boulders
-- **Manta rays**, schools of fish, rising bubbles and drifting particles
-- **A purple grotto** with glowing magenta ground cover, coral and barrel sponges
-- **A soundscape** made up as you listen: a deep rumble, distant whale calls, soft chimes and bubbles
-
-| | |
+| Stellar graph | Naval exploration |
 |---|---|
-| ![Shipwreck](.github/screenshots/shipwreck.jpg) | ![Looking up through the kelp](.github/screenshots/kelp-forest.jpg) |
-| ![Barrel sponges](.github/screenshots/sponge-garden.jpg) | ![Light rays over the kelp basin](.github/screenshots/light-rays.jpg) |
+| ![Stellar graph](.github/screenshots/navi-architecture.png) | ![Flying fleet](.github/screenshots/navi-engineering.png) |
 
-![The purple grotto](.github/screenshots/purple-grotto.jpg)
+## Explore
 
-## Controls
+Download [reference.html](reference.html) and open locally in a modern browser. The single file embeds a public Graphify snapshot and procedural perspective 3D renderer (Canvas software projection; not WebGPU). No external assets, network calls, AI or account needed for exploration. Repository links open GitHub.
 
-| | Keyboard & mouse |
+| Interaction | Input |
 |---|---|
-| Look around | Move the mouse |
-| Swim | `W` `A` `S` `D` |
-| Up / down | `E` / `Q` |
-| Swim faster | Hold `Shift` |
-| Jump to a viewpoint | `1` to `6` (the spots in the screenshots) |
-| Menu | `Esc` releases the mouse and opens the menu with the list of controls; **Resume** takes you back |
-| Sound on / off | `M` (sound starts when you dive in) |
-| Performance stats | `H` |
-| Detail level | **Low**, **Medium** or **High** in the menu (reloads the page) |
+| Orbit / zoom | Drag / wheel |
+| Pan | W A S D when canvas/page has focus |
+| Inspect or travel | Click star or label; Navigate to star |
+| Discover | Search, constellation filter, Directory |
+| Ocean / Star graph / Fleet | Mode buttons |
+| Clean view | Cinematic; Esc or Exit cinematic |
 
-The seabed, cliffs and arches are solid: you glide along the rock instead of swimming into it, and you still fit through every tunnel and arch. Kelp, plants, corals, sponges, loose rocks, the floating boulders, the ship and the whale tail you can swim through.
+15 verified-public catalog repositories in the initial snapshot, not an exhaustive account inventory. Solid lines indicate catalog integrations; dashed lines indicate curated category membership. [Catalog provenance](cosmic/catalog.json). No live telemetry or AST dependency inference.
 
-**On a touchscreen:** hold one finger down to swim forward and slide it to steer. Put a second finger down to go faster. The `≡` button in the corner opens the menu. Phones always show the scene in landscape and start on Low or Medium detail. (Touch support is experimental.)
+## Engineering
 
-## Detail levels
-
-The **Low**, **Medium** and **High** buttons in the menu pick the detail level; the current one is lit. Each level is the same world, built with less in it:
-
-| Level | What it is | Picked on a first visit for |
-|---|---|---|
-| **High** | The full scene | Computers |
-| **Medium** | Half of the leaves, sparkles and pebbles; small rocks, sponges and corals cast no shadows | Phones with 8 GB of memory |
-| **Low** | A quarter of the leaves, no anti-aliasing, coarser rocks and corals, simpler lighting, 480p to start with | Other phones, and computers with 4 GB of memory or less |
-
-If loading crashes the tab, or the graphics driver gives up, the page starts again one level lower. Your browser remembers the level, and the resolution and draw distance the scene settled on, for the next visit.
-
-## How it works
-
-- The seabed is sculpted on your graphics card every time the page opens, then decorated with about two million kelp leaves and plants, tens of thousands of rocks, and thousands of sponges, corals and fish.
-- Everything is drawn with **WebGPU** directly. No game engine or 3D library is used.
-- The ship, whale tail, mantas, fish and corals are built from simple mathematical shapes.
-- The sound is synthesized live with the Web Audio API.
-- It's built to run smoothly: about 180 fps at 2560×1440 on an RTX 5070 Ti. On slower hardware it aims for 60 fps by lowering first the resolution and then how far away plants and rocks are drawn, in small steps. The scene is already running, blurred, behind the start menu, so most of that tuning is done before you dive in. A low-end phone (Samsung Galaxy A16) reaches about 20 fps at 670×372 on Low.
-
-## Make it your own
-
-The readable source code is in the [`source`](source) folder. To change something and rebuild `index.html` you need [Node.js](https://nodejs.org) 18 or newer:
-
-```bash
+```sh
 cd source
 npm ci
-npm run verify
 npm run build
+npm run verify
 ```
 
-The verification command checks the reference shell contract. The build applies the NAVYV shell after bundling; the original source template remains the upstream baseline. This writes a new `index.html` next to this README. `npm run build:readable` writes an unminified version instead, which is easier to debug in the browser's developer tools.
+`reference.html` is built from `cosmic/` by the same build command. The older [index.html](index.html) remains a separate WebGPU underwater experience, preserving the upstream runtime and license. [Capture script](scripts/capture-reference.sh) generates real 1440 × 1060 browser screenshots; [evidence](docs/CAPTURES.md). The current prototype uses a CPU-side perspective 3D mesh renderer; GPU shaders and free-flight controls are roadmap items.
 
-`npm run build:dev` writes a separate `dev.html` with two extra tools that are not part of `index.html`: `F` flies the camera along a one-minute path through the whole world, and `B` runs that flight as a benchmark and reports frame and GPU times.
+## License & credits
 
-| File | What's inside |
-|---|---|
-| [`source/src/world.js`](source/src/world.js) | The world layout: rock walls, arches, tunnels, kelp forests, sponge gardens, fish schools, mantas, the ship and the whale tail. **A good place to start.** |
-| [`source/src/shaders.js`](source/src/shaders.js) | The look: water and fog colors, lighting, kelp, rocks, the water surface and light rays (WGSL shader code) |
-| [`source/src/main.js`](source/src/main.js) | The renderer, the camera, the controls, the six viewpoints and the camera path the world is laid out around |
-| [`source/src/audio.js`](source/src/audio.js) | The soundscape |
-| [`source/src/quality.js`](source/src/quality.js) | The detail levels: which one a device starts on, and what is remembered between visits |
-| [`source/src/math.js`](source/src/math.js) | Noise, random numbers and mesh-building helpers |
-| [`source/src/dev.js`](source/src/dev.js) | Development tools (fly-through and benchmark), only in `dev.html` |
-| [`source/template.html`](source/template.html) | The page around the scene: loading bar, start menu, links and their styles |
-
-Some easy first tweaks:
-
-- **Water color:** `WCOL` (blue-green water) and `PCOL` (purple grotto) near the top of the shared scene code in `shaders.js`
-- **Sunlight color:** `SUNC` right next to them
-- **Brightness and light rays:** `EXPO` and `RAYS` in `main.js`
-- **Swimming speed:** search for `26 : 7` in `main.js` (fast speed : normal speed)
-
-## License and attribution
-
-[MIT](LICENSE). Original Abyssal Garden by Maksymilian Dendura ([Noniv](https://github.com/Noniv)); NAVYV interface and engineering integration by Neguchads. Original attribution and support are retained.
-
-## NAVI Engineering Universe
-
-[Public ecosystem integration](integration/README.md) — immersive presentation layer for the Neguchads engineering portfolio. The original experience remains intact.
+[MIT](LICENSE). Legacy underwater engine derived from [Abyssal Garden](https://github.com/Noniv/abyssal-garden), copyright 2026 Maksymilian Dendura. NAVI cosmic scene, integration and reference interface: Neguchads. Original attribution is retained.

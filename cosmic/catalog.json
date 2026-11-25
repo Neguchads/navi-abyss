@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "owner": "Neguchads",
+  "relationship": "curated-membership",
+  "sectors": [
+    {
+      "id": "games",
+      "en": "Game engineering",
+      "pt": "Engenharia de jogos",
+      "desc": [
+        "Static recompilation, native runtimes and preservation.",
+        "Recompilação estática, runtimes nativos e preservação."
+      ],
+      "color": "#00b3ff",
+      "pos": [
+        -3,
+        0,
+        3
+      ],
+      "repos": [
+        [
+          "chad-recomp",
+          "Chad Standard Recomp"
+        ],
+        [
+          "cdos-nintendods-recomp",
+          "Dawn of Sorrow"
+        ],
+        [
+          "ccod-xbox-recomp",
+          "Curse of Darkness"
+        ],
+        [
+          "csotn-saturn-recomp",
+          "Symphony of the Night"
+        ]
+      ]
+    },
+    {
+      "id": "ai",
+      "en": "AI & automation",
+      "pt": "IA e automação",
+      "desc": [
+        "AI-assisted creation and visual workflows.",
+        "Criação assistida por IA e fluxos de trabalho visuais."
+      ],
+      "color": "#63daff",
+      "pos": [
+        3,
+        0,
+        3
+      ],
+      "repos": [
+        [
+          "ScriptForge",
+          "ScriptForge"
+        ],
+        [
+          "comfyui",
+          "PoseClone / ComfyUI"
+        ]
+      ]
+    },
+    {
+      "id": "apps",
+      "en": "Applications",
+      "pt": "Aplicações",
+      "desc": [
+        "Data visualization and web applications.",
+        "Visualização de dados e aplicações web."
+      ],
+      "color": "#818cf8",
+      "pos": [
+        3,
+        0,
+        -3
+      ],
+      "repos": [
+        [
+          "starlight-bi",
+          "Starlight BI"
+        ],
+        [
+          "favorite-manager",
+          "Favorite Manager"
+        ]
+      ]
+    },
+    {
+      "id": "tools",
+      "en": "Developer tools",
+      "pt": "Ferramentas de desenvolvimento",
+      "desc": [
+        "Knowledge graphs, reusable configuration and evidence-driven engineering.",
+        "Grafos de conhecimento, configuração reutilizável e engenharia orientada a evidências."
+      ],
+      "color": "#a9c3d9",
+      "pos": [
+        -3,
+        0,
+        -3
+      ],
+      "repos": [
+        [
+          "spec-to-proof",
+          "Spec-to-Proof"
+        ],
+        [
+          "codex-config-universal",
+          "Codex Universal Config"
+        ],
+        [
+          "navi-githomepage",
+          "NAVI GitHub Homepage"
+        ],
+        [
+          "navi-graphify",
+          "NAVI Graphify"
+        ],
+        [
+          "Neguchads",
+          "Neguchads Profile"
+        ],
+        [
+          "navi-abyss",
+          "NAVI Abyss"
+        ],
+        [
+          "navi-core",
+          "NAVI Core"
+        ]
+      ]
+    }
+  ],
+  "integrations": [
+    {
+      "source": "navi-graphify",
+      "target": "navi-githomepage",
+      "kind": "catalog-provider"
+    },
+    {
+      "source": "navi-githomepage",
+      "target": "Neguchads",
+      "kind": "visualization-provider"
+    },
+    {
+      "source": "Neguchads",
+      "target": "navi-graphify",
+      "kind": "project-discovery"
+    },
+    {
+      "source": "navi-abyss",
+      "target": "navi-githomepage",
+      "kind": "immersive-theme-provider"
+    },
+    {
+      "source": "Neguchads",
+      "target": "navi-abyss",
+      "kind": "public-experience-publisher"
+    },
+    {
+      "source": "navi-core",
+      "target": "navi-abyss",
+      "kind": "verification-provider"
+    }
+  ],
+  "source": {
+    "repository": "Neguchads/navi-graphify",
+    "commit": "14648568e89a357e5fe87a2c47d8aa063b60be59",
+    "path": "integrations/portfolio/catalog.json",
+    "verified_public_on": "2026-11-25"
+  }
+}

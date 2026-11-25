@@ -1,34 +1,32 @@
-# NAVYV Abyss — engineering reference
-
-Status: experimental. Reference 01 in NAVI Engineering Universe.
+# NAVI Abyss — Engineering reference
+Status: experimental / cosmic universe prototype.
 
 ## Architecture
-The existing static-website verification profile and pinned NAVI pilot remain authoritative. NEF is advisory. Do not rearrange upstream folders merely to match a reference.
+- `cosmic/catalog.json`: reviewed Graphify public catalog snapshot, sourced from the rename PR commit with 15 public repository identities checked 2026-11-25. Never ingest private repositories, raw graph files or local agent memory.
+- `cosmic/scene.js`: perspective 3D geometry, orbit camera, animated triangulated water, polygonal ships, repository star billboards, curated and integration graph edges, filter and inspector.
+- `cosmic/template.html` + `cosmic/build.mjs`: deterministic offline single-file `reference.html`. Canvas 2D draws projected 3D geometry with painter sorting; this is not a GPU renderer or physically accurate fluid simulation.
+- `source/` + `index.html`: retained legacy underwater WebGPU engine. Original copyright, engine bytes and preferences unchanged.
+- `integration/universe.css`: downstream interface contract preserved.
+- `.navi/project.toml`: static-website profile, pinned Core workflow read-only. NEF references remain advisory.
 
-- `source/src/`: upstream procedural rendering, geometry, controls, audio and quality selection.
-- `source/template.html`: upstream UI template and engine DOM contract.
-- `source/reference.mjs`: pure post-build composition, owns NAVYV branding and public navigation; applied by `source/build.mjs` to all build modes.
-- `index.html`: offline distributable; no fetch, AI calls or external asset requirements added.
-- `integration/universe.css`: existing consumer theme; unchanged for downstream compatibility.
-- `.navi/project.toml` and existing pilot: read-only, pinned Core verification. No cross-repository writes or private export.
+Data flow: reviewed Graphify catalog → embedded JSON → star positions / integration edges → selection and public GitHub links. No live fetch or auto-discovery. Catalog membership edges are dashed; integration edges solid; neither is an AST claim.
 
-Flow: source + template → esbuild → deterministic NAVYV shell → offline HTML. Public navigation is explicit links, not an embedded live graph or authentication service.
-
-## Verification
-Run from `source/`: `npm ci`, `npm run verify`, `npm run build`, then `npm run verify` again. Check for unexpected generated diff with `git diff -- ../index.html`. The reference tests check exact shell parity, engine hooks, attribution and offline asset constraints. Test actual loading, entering/resuming, quality presets, audio, keyboard, touch and unsupported WebGPU in supported browsers. Static checks do not prove rendering or performance.
+## Acceptance and verification
+Run `cd source && npm ci && npm run build && npm run verify`. Verify deterministic output for both HTML files; run browser capture with `bash scripts/capture-reference.sh` from root. Test search, category filter, inspector, focus, drag, wheel, keyboard, mode switching, cinematic, narrow screen and no canvas fallback. Real GPU performance is not certified by these tests.
 
 ## Roadmap
 | Milestone | Status | Acceptance |
 |---|---|---|
-| Brand and source shell | Implemented, pending runtime review | Published HTML and source share identical shell sections |
-| Core pilot | Existing | Pinned gate passes for current revision |
-| NEF adoption | Reference documentation added | Review architecture, roadmap and handoff |
-| Runtime acceptance | Pending | Desktop and mobile WebGPU manual smoke tests |
-| Public graph integration | Planned, not connected | Reviewed versioned public-only catalog; offline fallback |
+| Rename / public data snapshot | Implemented in PR | Review canonical catalog update and downstream references |
+| Cosmic 3D geometry | Prototype implemented | Browser evidence and human visual review |
+| Repository stars / graph | Implemented in prototype | Unique public IDs, valid integration endpoints, working inspector |
+| Fleet / orbit modes | Implemented in prototype | Camera movement and three mode captures |
+| Public catalog refresh | Planned | Reviewed snapshot pipeline with public checks and offline fallback |
+| GPU renderer / pilotable ships | Planned | WebGL/WebGPU mesh, shader and free-flight acceptance |
+| Legacy GPU acceptance | Pending | Hardware smoke test and measured performance |
 
 ## Handoff
-Scope: reference shell, README and tests. Original renderer, audio, license, package dependency versions and downstream CSS unchanged. The distributed engine script was preserved from the base artifact; the full esbuild rebuild and GPU runtime must be verified before treating this as release-ready. The earlier pilot checks tracked JS syntax only. No claim of live NAVI telemetry.
+Scope: rename, original cosmic reference experience, public catalog snapshot, documentation and captures. Explicit decision: use native Canvas perspective projection to avoid new runtime dependencies and support offline/headless browser operation. Flying ships are animated scenery; users navigate the camera, not a simulated ship controller. Preserve upstream credits and do not imply production verification. Initial source snapshot comes from proposed Graphify catalog PR; merge/review it separately. Rollback by reverting the cosmic commits, retain Core pin and legacy engine. No automatic merge.
 
-Decision: retain English as the existing project language; use the existing Neguchads navy/cyan palette and an adapted geometric mark. Preserve upstream credit and support links.
-
-Next: review PR, run verification/build and visual smoke tests, then consider additional NEF reference profiles and actual graph integration. Rollback by reverting the reference commit; retain existing pilot.
+## Capture evidence
+The initial browser capture job succeeded in all three modes after a headless frame timing correction; see [CAPTURES.md](CAPTURES.md). Add browser DOM smoke checks for directory, filter, selection, GitHub link, route toggle and mode switch. GPU performance, manual interaction and visual quality remain unverified. Final revision CI must pass before merge.
