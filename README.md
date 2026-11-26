@@ -42,3 +42,5 @@ npm run verify
 ## License & credits
 
 [MIT](LICENSE). Legacy underwater engine derived from [Abyssal Garden](https://github.com/Noniv/abyssal-garden), copyright 2026 Maksymilian Dendura. NAVI cosmic scene, integration and reference interface: Neguchads. Original attribution is retained.
+
+[Open-source credits, provenance and distribution review](CREDITS.md).
